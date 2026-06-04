@@ -1,3 +1,7 @@
+// REVIEW VERSION — Logo6 Theme
+// Original theme backup: git stash or
+// revert to previous commit if needed
+
 "use client";
 
 import { useRef, useEffect } from "react";
@@ -50,21 +54,21 @@ export default function WhyChooseUs() {
     <section
       ref={ref}
       className="py-24 px-6 lg:px-12"
-      style={{ backgroundColor: "#1A2E1A" }}
+      style={{ backgroundColor: "#1B5E20" }}
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-14 reveal">
           <p
             className="text-xs font-bold tracking-widest uppercase mb-3"
-            style={{ color: "#F59E0B" }}
+            style={{ color: "#E8820C" }}
           >
             Our Advantage
           </p>
           <h2 className="text-4xl sm:text-5xl font-black text-white mb-4">
             Why ScraPack?
           </h2>
-          <p className="text-lg text-gray-300 max-w-xl mx-auto">
+          <p className="text-lg max-w-xl mx-auto" style={{ color: "#A5D6A7" }}>
             What makes us the preferred OCC export partner.
           </p>
         </div>
@@ -81,8 +85,8 @@ export default function WhyChooseUs() {
               }}
               onMouseOver={(e) => {
                 const el = e.currentTarget as HTMLElement;
-                el.style.backgroundColor = "rgba(255,255,255,0.09)";
-                el.style.borderColor = "rgba(255,255,255,0.20)";
+                el.style.backgroundColor = "rgba(255,255,255,0.10)";
+                el.style.borderColor = "rgba(232,130,12,0.40)";
               }}
               onMouseOut={(e) => {
                 const el = e.currentTarget as HTMLElement;
@@ -99,7 +103,7 @@ export default function WhyChooseUs() {
               <h3 className="text-xl font-bold text-white mb-3">
                 {feat.title}
               </h3>
-              <p className="text-base leading-relaxed text-gray-300">
+              <p className="text-base leading-relaxed" style={{ color: "#C8E6C9" }}>
                 {feat.description}
               </p>
             </div>

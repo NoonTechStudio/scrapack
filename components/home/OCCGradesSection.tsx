@@ -1,3 +1,7 @@
+// REVIEW VERSION — Logo6 Theme
+// Original theme backup: git stash or
+// revert to previous commit if needed
+
 "use client";
 
 import { useRef, useEffect } from "react";
@@ -10,9 +14,13 @@ const GRADES = [
     description:
       "The cleanest grade of corrugated containers, free from all contaminants. Double-sorted, low moisture, baled and strapped for export. Preferred by premium Indian paper mills.",
     specs: ["Double sorted", "Low moisture", "Baled & strapped", "Export ready", "Premium grade"],
-    topGradient: "linear-gradient(90deg, #059669, #34d399)",
-    badgeBg: "#d1fae5",
-    badgeColor: "#065f46",
+    topColor: "#2E7D32",
+    badgeBg: "#E8F5E9",
+    badgeColor: "#1B5E20",
+    watermarkColor: "rgba(46,125,50,0.06)",
+    specBg: "#F1F8E9",
+    specBorder: "rgba(46,125,50,0.20)",
+    specText: "#1B5E20",
     linkText: "Request pricing for Grade 11 →",
   },
   {
@@ -22,9 +30,13 @@ const GRADES = [
     description:
       "Baled corrugated containers with standard sorting. Cost-effective for high-volume operations. Consistent supply with full export documentation.",
     specs: ["Standard sorting", "High volume", "Baled", "Export ready", "Cost effective"],
-    topGradient: "linear-gradient(90deg, #D97706, #fbbf24)",
-    badgeBg: "#fef3c7",
-    badgeColor: "#92400E",
+    topColor: "#E8820C",
+    badgeBg: "#FFF3E0",
+    badgeColor: "#C96B00",
+    watermarkColor: "rgba(232,130,12,0.06)",
+    specBg: "#FFF8F0",
+    specBorder: "rgba(232,130,12,0.20)",
+    specText: "#7C2D12",
     linkText: "Request pricing for Grade 12 →",
   },
 ];
@@ -50,15 +62,14 @@ export default function OCCGradesSection() {
     <section
       ref={ref}
       id="grades"
-      className="py-24 px-6 lg:px-12"
-      style={{ backgroundColor: "#FAFAF8" }}
+      className="py-24 px-6 lg:px-12 bg-white"
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-14 reveal">
           <p
             className="text-xs font-bold tracking-widest uppercase mb-3"
-            style={{ color: "#D97706" }}
+            style={{ color: "#E8820C" }}
           >
             What We Export
           </p>
@@ -68,7 +79,7 @@ export default function OCCGradesSection() {
           >
             Our OCC Products
           </h2>
-          <p className="text-lg max-w-xl mx-auto text-gray-500">
+          <p className="text-lg max-w-xl mx-auto" style={{ color: "#6B7280" }}>
             Export-grade corrugated cardboard, sourced and baled across the
             United States.
           </p>
@@ -84,9 +95,13 @@ export default function OCCGradesSection() {
                 title,
                 description,
                 specs,
-                topGradient,
+                topColor,
                 badgeBg,
                 badgeColor,
+                watermarkColor,
+                specBg,
+                specBorder,
+                specText,
                 linkText,
               },
               i
@@ -99,8 +114,8 @@ export default function OCCGradesSection() {
               >
                 {/* Top colour band */}
                 <div
-                  className="h-3"
-                  style={{ background: topGradient }}
+                  className="h-1.5"
+                  style={{ backgroundColor: topColor }}
                 />
 
                 {/* Card body */}
@@ -108,10 +123,7 @@ export default function OCCGradesSection() {
                   {/* Faint watermark number */}
                   <div
                     className="absolute right-4 bottom-0 select-none pointer-events-none font-black leading-none text-[100px] md:text-[180px]"
-                    style={{
-                      color: "#f3f4f6",
-                      lineHeight: 1,
-                    }}
+                    style={{ color: watermarkColor, lineHeight: 1 }}
                   >
                     {number}
                   </div>
@@ -127,12 +139,12 @@ export default function OCCGradesSection() {
 
                     <h3
                       className="text-2xl font-bold mt-4 mb-3"
-                      style={{ color: "#111827" }}
+                      style={{ color: "#1A2E1A" }}
                     >
                       {title}
                     </h3>
 
-                    <p className="text-sm leading-relaxed text-gray-500 mb-6">
+                    <p className="text-sm leading-relaxed mb-6" style={{ color: "#6B7280" }}>
                       {description}
                     </p>
 
@@ -141,10 +153,11 @@ export default function OCCGradesSection() {
                       {specs.map((s) => (
                         <span
                           key={s}
-                          className="px-4 py-2 rounded-full text-sm border text-gray-600"
+                          className="px-4 py-2 rounded-full text-sm border"
                           style={{
-                            backgroundColor: "#f9fafb",
-                            borderColor: "#e5e7eb",
+                            backgroundColor: specBg,
+                            borderColor: specBorder,
+                            color: specText,
                           }}
                         >
                           {s}
@@ -153,13 +166,11 @@ export default function OCCGradesSection() {
                     </div>
 
                     {/* Bottom link */}
-                    <div
-                      className="pt-6 border-t border-gray-100"
-                    >
+                    <div className="pt-6 border-t border-gray-100">
                       <a
                         href="/contact"
                         className="text-sm font-semibold transition-colors hover:opacity-80"
-                        style={{ color: "#D97706" }}
+                        style={{ color: "#E8820C" }}
                       >
                         {linkText}
                       </a>

@@ -1,15 +1,41 @@
+/* REVIEW VERSION — Logo6 Theme */
+/* Original theme backup: git stash or revert to previous commit if needed */
+
 @import "tailwindcss";
 
 @theme {
   --color-forest: #1A2E1A;
   --color-forest-light: #2D5A3D;
-  --color-accent: #D97706;
-  --color-accent-light: #F59E0B;
-  --color-paper: #FAFAF8;
+  --color-accent: #E8820C;
+  --color-accent-light: #E8820C;
+  --color-paper: #FDFAF4;
+
+  --color-brand-green: #2E7D32;
+  --color-brand-green-dark: #1B5E20;
+  --color-brand-green-light: #E8F5E9;
+  --color-brand-orange: #E8820C;
+  --color-brand-orange-dark: #C96B00;
+  --color-brand-orange-light: #FFF3E0;
+  --color-brand-kraft: #8B6914;
+  --color-brand-beige: #F5E6C8;
+  --color-brand-beige-light: #FDFAF4;
 
   --animate-float-a: floatA 3.5s ease-in-out infinite;
   --animate-float-b: floatB 4.2s ease-in-out 1.5s infinite;
   --animate-float-c: floatC 3.8s ease-in-out 0.8s infinite;
+}
+
+:root {
+  --primary: #2E7D32;
+  --primary-dark: #1B5E20;
+  --primary-light: #E8F5E9;
+  --accent: #E8820C;
+  --accent-dark: #C96B00;
+  --accent-light: #FFF3E0;
+  --kraft: #8B6914;
+  --beige: #F5E6C8;
+  --beige-light: #FDFAF4;
+  --dark-text: #1A2E1A;
 }
 
 @keyframes floatA {
@@ -31,7 +57,7 @@ html {
 
 body {
   font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
-  background-color: #FAFAF8;
+  background-color: #FDFAF4;
   color: #374151;
 }
 
