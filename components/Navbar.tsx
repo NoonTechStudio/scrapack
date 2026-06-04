@@ -35,19 +35,17 @@ export default function Navbar() {
           <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
             <div className="flex items-center justify-between h-20">
 
-              {/* Logo — white/80 backdrop since Logo6 has white background */}
+              {/* Logo */}
               <div className="flex-shrink-0 flex items-center">
                 <Link href="/">
-                  <div className="bg-white/80 backdrop-blur-sm rounded-xl px-2 py-1">
-                    <Image
-                      src="/Logo6.png"
-                      alt="ScraPack Solutions LLC"
-                      width={220}
-                      height={66}
-                      className="object-contain object-left"
-                      preload
-                    />
-                  </div>
+                  <Image
+                    src="/Logo6.png"
+                    alt="ScraPack Solutions LLC"
+                    width={220}
+                    height={66}
+                    className="object-contain object-left"
+                    priority
+                  />
                 </Link>
               </div>
 
@@ -109,7 +107,7 @@ export default function Navbar() {
               style={{ boxShadow: "0 8px 32px rgba(46,125,50,0.12)" }}
             >
 
-              {/* Logo — smaller in pill, white bg shows naturally on white pill */}
+              {/* Logo — smaller in pill */}
               <div className="flex-shrink-0 flex items-center">
                 <Link href="/">
                   <Image
@@ -118,7 +116,7 @@ export default function Navbar() {
                     width={190}
                     height={57}
                     className="object-contain object-left"
-                    preload
+                    priority
                   />
                 </Link>
               </div>

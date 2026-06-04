@@ -21,7 +21,7 @@ export default function HeroSection() {
           width={150}
           height={45}
           className="object-contain object-left"
-          preload
+          priority
         />
         <a
           href="https://wa.me/12155550000"
