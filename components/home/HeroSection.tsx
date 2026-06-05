@@ -15,14 +15,16 @@ export default function HeroSection() {
     >
       {/* Mobile header — logo + WhatsApp quick link */}
       <div className="md:hidden flex items-center justify-between px-5 pt-4 pb-2 relative z-20">
-        <Image
-          src="/Logo6.png"
-          alt="ScraPack Solutions LLC"
-          width={150}
-          height={45}
-          className="object-contain object-left"
-          priority
-        />
+        <div className="bg-black/50 backdrop-blur-sm rounded-lg overflow-hidden">
+          <Image
+            src="/Upgrade.png"
+            alt="ScraPack Solutions LLC"
+            width={150}
+            height={56}
+            className="object-contain object-left"
+            priority
+          />
+        </div>
         <a
           href="https://wa.me/12155550000"
           className="flex items-center gap-2 bg-[#2E7D32] text-white text-xs font-semibold px-3 py-2 rounded-full shadow-md"
@@ -48,7 +50,7 @@ export default function HeroSection() {
         style={{ border: "1px solid #E8820C", opacity: 0.06 }}
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto w-full px-6 md:px-12 lg:px-20 pt-6 pb-16 md:pt-28 md:pb-20">
+      <div className="relative z-10 max-w-7xl mx-auto w-full px-6 md:px-12 lg:px-20 pt-36 pb-16 md:pt-40 md:pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-[60%_40%] gap-12 lg:gap-8 items-center">
           {/* ── LEFT: Content ── */}
           <div>

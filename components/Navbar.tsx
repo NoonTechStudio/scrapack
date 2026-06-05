@@ -1,7 +1,3 @@
-// REVIEW VERSION — Logo6 Theme
-// Original theme backup: git stash or
-// revert to previous commit if needed
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -32,66 +28,65 @@ export default function Navbar() {
 
         {/* ── TRANSPARENT STATE (top of page) ── */}
         {!scrolled && (
-          <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
-            <div className="flex items-center justify-between h-20">
+          <div className="bg-black/25 backdrop-blur-sm">
+            <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
+              <div className="flex items-center justify-between py-4">
 
-              {/* Logo */}
-              <div className="flex-shrink-0 flex items-center">
-                <Link href="/">
-                  <Image
-                    src="/Logo6.png"
-                    alt="ScraPack Solutions LLC"
-                    width={220}
-                    height={66}
-                    className="object-contain object-left"
-                    priority
-                  />
-                </Link>
-              </div>
-
-              {/* Nav links */}
-              <div className="hidden md:flex items-center gap-8">
-                {NAV_LINKS.map(({ label, href }) => (
-                  <Link
-                    key={label}
-                    href={href}
-                    className="text-[#1B5E20] hover:text-[#E8820C] transition-colors duration-200 font-medium text-sm tracking-wide"
-                  >
-                    {label}
+                {/* Logo */}
+                <div className="flex-shrink-0 flex items-center">
+                  <Link href="/">
+                    <Image
+                      src="/Upgrade.png"
+                      alt="ScraPack Solutions LLC"
+                      width={240}
+                      height={90}
+                      className="object-contain object-left"
+                      priority
+                    />
                   </Link>
-                ))}
+                </div>
+
+                {/* Nav links */}
+                <div className="hidden md:flex items-center gap-8">
+                  {NAV_LINKS.map(({ label, href }) => (
+                    <Link
+                      key={label}
+                      href={href}
+                      className="text-white hover:text-[#E8820C] transition-colors duration-200 font-medium text-sm tracking-wide"
+                    >
+                      {label}
+                    </Link>
+                  ))}
+                </div>
+
+                {/* CTA + hamburger */}
+                <div className="flex-shrink-0 flex items-center gap-3">
+                  <Link
+                    href="/contact"
+                    className="hidden md:inline-flex items-center bg-[#E8820C] hover:bg-[#C96B00] text-white font-semibold px-6 py-2.5 rounded-full transition-all duration-200 whitespace-nowrap text-sm"
+                    style={{ boxShadow: "0 4px 16px rgba(232,130,12,0.30)" }}
+                  >
+                    Get a Quote
+                  </Link>
+
+                  <button
+                    onClick={() => setMobileOpen((o) => !o)}
+                    aria-label="Toggle menu"
+                    className="md:hidden flex flex-col justify-center items-center w-9 h-9 gap-1.5"
+                  >
+                    <span
+                      className={`block w-5 h-0.5 bg-white transition-all duration-300 origin-center ${mobileOpen ? "rotate-45 translate-y-2" : ""}`}
+                    />
+                    <span
+                      className={`block w-5 h-0.5 bg-white transition-all duration-300 ${mobileOpen ? "opacity-0 scale-x-0" : ""}`}
+                    />
+                    <span
+                      className={`block w-5 h-0.5 bg-white transition-all duration-300 origin-center ${mobileOpen ? "-rotate-45 -translate-y-2" : ""}`}
+                    />
+                  </button>
+                </div>
+
               </div>
-
-              {/* CTA + hamburger */}
-              <div className="flex-shrink-0 flex items-center gap-3">
-                <Link
-                  href="/contact"
-                  className="hidden md:inline-flex items-center bg-[#E8820C] hover:bg-[#C96B00] text-white font-semibold px-6 py-2.5 rounded-full transition-all duration-200 whitespace-nowrap text-sm"
-                  style={{ boxShadow: "0 4px 16px rgba(232,130,12,0.30)" }}
-                >
-                  Get a Quote
-                </Link>
-
-                <button
-                  onClick={() => setMobileOpen((o) => !o)}
-                  aria-label="Toggle menu"
-                  className="md:hidden flex flex-col justify-center items-center w-9 h-9 gap-1.5"
-                >
-                  <span
-                    className={`block w-5 h-0.5 transition-all duration-300 origin-center ${mobileOpen ? "rotate-45 translate-y-2" : ""}`}
-                    style={{ backgroundColor: "#1A2E1A" }}
-                  />
-                  <span
-                    className={`block w-5 h-0.5 transition-all duration-300 ${mobileOpen ? "opacity-0 scale-x-0" : ""}`}
-                    style={{ backgroundColor: "#1A2E1A" }}
-                  />
-                  <span
-                    className={`block w-5 h-0.5 transition-all duration-300 origin-center ${mobileOpen ? "-rotate-45 -translate-y-2" : ""}`}
-                    style={{ backgroundColor: "#1A2E1A" }}
-                  />
-                </button>
-              </div>
-
             </div>
           </div>
         )}
@@ -103,18 +98,18 @@ export default function Navbar() {
             style={{ willChange: "transform" }}
           >
             <div
-              className="flex items-center justify-between gap-8 bg-white/95 backdrop-blur-xl border border-[#2E7D32]/20 rounded-full px-6 py-3 w-auto"
-              style={{ boxShadow: "0 8px 32px rgba(46,125,50,0.12)" }}
+              className="flex items-center justify-between gap-8 bg-gray-900/95 backdrop-blur-xl border border-white/10 rounded-full px-6 py-3 w-auto shadow-xl"
+              style={{ boxShadow: "0 8px 32px rgba(0,0,0,0.30)" }}
             >
 
               {/* Logo — smaller in pill */}
               <div className="flex-shrink-0 flex items-center">
                 <Link href="/">
                   <Image
-                    src="/Logo6.png"
+                    src="/Upgrade.png"
                     alt="ScraPack Solutions LLC"
-                    width={190}
-                    height={57}
+                    width={200}
+                    height={75}
                     className="object-contain object-left"
                     priority
                   />
@@ -127,7 +122,7 @@ export default function Navbar() {
                   <Link
                     key={label}
                     href={href}
-                    className="text-[#1B5E20] hover:text-[#E8820C] transition-colors duration-200 font-medium text-sm tracking-wide whitespace-nowrap"
+                    className="text-white/90 hover:text-[#E8820C] transition-colors duration-200 font-medium text-sm tracking-wide whitespace-nowrap"
                   >
                     {label}
                   </Link>
@@ -149,16 +144,13 @@ export default function Navbar() {
                   className="md:hidden flex flex-col justify-center items-center w-9 h-9 gap-1.5"
                 >
                   <span
-                    className={`block w-5 h-0.5 transition-all duration-300 origin-center ${mobileOpen ? "rotate-45 translate-y-2" : ""}`}
-                    style={{ backgroundColor: "#1A2E1A" }}
+                    className={`block w-5 h-0.5 bg-white transition-all duration-300 origin-center ${mobileOpen ? "rotate-45 translate-y-2" : ""}`}
                   />
                   <span
-                    className={`block w-5 h-0.5 transition-all duration-300 ${mobileOpen ? "opacity-0 scale-x-0" : ""}`}
-                    style={{ backgroundColor: "#1A2E1A" }}
+                    className={`block w-5 h-0.5 bg-white transition-all duration-300 ${mobileOpen ? "opacity-0 scale-x-0" : ""}`}
                   />
                   <span
-                    className={`block w-5 h-0.5 transition-all duration-300 origin-center ${mobileOpen ? "-rotate-45 -translate-y-2" : ""}`}
-                    style={{ backgroundColor: "#1A2E1A" }}
+                    className={`block w-5 h-0.5 bg-white transition-all duration-300 origin-center ${mobileOpen ? "-rotate-45 -translate-y-2" : ""}`}
                   />
                 </button>
               </div>

@@ -22,33 +22,30 @@ const PRODUCT_LINKS = [
 
 export default function Footer() {
   return (
-    <footer className="border-t-4 border-[#2E7D32]" style={{ backgroundColor: "#F1F8E9" }}>
+    <footer style={{ backgroundColor: "#0F1A0F" }}>
       {/* Main columns */}
       <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-16 pb-10">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
           {/* Brand */}
           <div className="col-span-2 lg:col-span-1">
             <Image
-              src="/Logo6.png"
+              src="/Upgrade.png"
               alt="ScraPack Solutions LLC"
-              width={180}
-              height={54}
+              width={220}
+              height={82}
               className="object-contain object-left mb-4"
             />
-            <p className="text-sm leading-relaxed mb-3" style={{ color: "#4A5568" }}>
+            <p className="text-sm leading-relaxed mb-3 text-gray-300">
               From U.S. Recovery to Global Production
             </p>
-            <p className="text-sm" style={{ color: "#4A5568" }}>
+            <p className="text-sm text-gray-300">
               9830 Walley Ave, Philadelphia, PA 19115
             </p>
           </div>
 
           {/* Company */}
           <div>
-            <h4
-              className="font-bold mb-5 text-sm uppercase tracking-wider"
-              style={{ color: "#1B5E20" }}
-            >
+            <h4 className="text-white font-bold mb-5 text-sm uppercase tracking-wider">
               Company
             </h4>
             <ul className="space-y-3">
@@ -56,8 +53,7 @@ export default function Footer() {
                 <li key={label}>
                   <Link
                     href={href}
-                    className="text-sm transition-colors duration-200 hover:text-[#E8820C]"
-                    style={{ color: "#2E7D32" }}
+                    className="text-sm text-gray-300 transition-colors duration-200 hover:text-[#E8820C]"
                   >
                     {label}
                   </Link>
@@ -68,10 +64,7 @@ export default function Footer() {
 
           {/* Products */}
           <div>
-            <h4
-              className="font-bold mb-5 text-sm uppercase tracking-wider"
-              style={{ color: "#1B5E20" }}
-            >
+            <h4 className="text-white font-bold mb-5 text-sm uppercase tracking-wider">
               Products
             </h4>
             <ul className="space-y-3">
@@ -79,8 +72,7 @@ export default function Footer() {
                 <li key={label}>
                   <Link
                     href={href}
-                    className="text-sm transition-colors duration-200 hover:text-[#E8820C]"
-                    style={{ color: "#2E7D32" }}
+                    className="text-sm text-gray-300 transition-colors duration-200 hover:text-[#E8820C]"
                   >
                     {label}
                   </Link>
@@ -91,18 +83,14 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4
-              className="font-bold mb-5 text-sm uppercase tracking-wider"
-              style={{ color: "#1B5E20" }}
-            >
+            <h4 className="text-white font-bold mb-5 text-sm uppercase tracking-wider">
               Get in Touch
             </h4>
             <ul className="space-y-3">
               <li>
                 <a
                   href="mailto:info@scrapacksolutions.com"
-                  className="text-sm transition-colors duration-200 hover:text-[#E8820C] flex items-center gap-2"
-                  style={{ color: "#2E7D32" }}
+                  className="text-sm text-gray-300 transition-colors duration-200 hover:text-[#E8820C] flex items-center gap-2"
                 >
                   <span style={{ color: "#E8820C" }}>📧</span> info@scrapacksolutions.com
                 </a>
@@ -112,8 +100,7 @@ export default function Footer() {
                   href="https://wa.me/12155550000"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm transition-colors duration-200 hover:text-[#E8820C] flex items-center gap-2"
-                  style={{ color: "#2E7D32" }}
+                  className="text-sm text-gray-300 transition-colors duration-200 hover:text-[#E8820C] flex items-center gap-2"
                 >
                   <svg
                     width="14"
@@ -128,7 +115,7 @@ export default function Footer() {
                   WhatsApp Us
                 </a>
               </li>
-              <li className="text-sm flex items-center gap-2" style={{ color: "#4A5568" }}>
+              <li className="text-sm text-gray-300 flex items-center gap-2">
                 <span style={{ color: "#E8820C" }}>📍</span> Philadelphia, PA
               </li>
             </ul>
@@ -136,7 +123,7 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-[#2E7D32]/20" />
+        <div className="border-t border-white/10" />
       </div>
 
       {/* Bottom bar — full-width dark green */}
