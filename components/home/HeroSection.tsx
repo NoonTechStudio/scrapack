@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function HeroSection() {
   return (
     <section
-      className="relative min-h-screen flex flex-col md:justify-center overflow-hidden"
+      className="relative min-h-screen flex flex-col md:justify-center overflow-hidden pt-24 md:pt-28"
       style={{
         background:
           "linear-gradient(135deg, #FDFAF4 0%, #F1F8E9 40%, #FFF8F0 100%)",
@@ -50,7 +50,7 @@ export default function HeroSection() {
         style={{ border: "1px solid #E8820C", opacity: 0.06 }}
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto w-full px-6 md:px-12 lg:px-20 pt-36 pb-16 md:pt-40 md:pb-20">
+      <div className="relative z-10 max-w-7xl mx-auto w-full px-6 md:px-12 lg:px-20 pt-6 pb-16 md:pt-8 md:pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-[60%_40%] gap-12 lg:gap-8 items-center">
           {/* ── LEFT: Content ── */}
           <div>

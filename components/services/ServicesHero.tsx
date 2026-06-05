@@ -7,6 +7,7 @@ import Link from "next/link";
 export default function ServicesHero() {
   return (
     <section
+      className="pt-24"
       style={{
         background: "linear-gradient(135deg, #FDFAF4, #F1F8E9 50%, #FFF8F0)",
       }}

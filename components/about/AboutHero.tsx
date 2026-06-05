@@ -27,6 +27,7 @@ export default function AboutHero() {
   return (
     <section
       ref={ref}
+      className="pt-24"
       style={{
         background:
           "linear-gradient(135deg, #FDFAF4 0%, #F1F8E9 50%, #FFF8F0 100%)",
