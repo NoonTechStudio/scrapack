@@ -17,11 +17,11 @@ export default function HeroSection() {
       <div className="md:hidden flex items-center justify-between px-5 pt-4 pb-2 relative z-20">
         <div className="bg-black/50 backdrop-blur-sm rounded-lg overflow-hidden">
           <Image
-            src="/Upgrade.png"
+            src="/upgrade-logo.png"
             alt="ScraPack Solutions LLC"
             width={150}
             height={56}
-            className="object-contain object-left"
+            className="object-contain object-left w-auto h-12"
             priority
           />
         </div>

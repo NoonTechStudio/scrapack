@@ -29,11 +29,11 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2 lg:col-span-1">
             <Image
-              src="/Upgrade.png"
+              src="/upgrade-logo.png"
               alt="ScraPack Solutions LLC"
-              width={220}
-              height={82}
-              className="object-contain object-left mb-4"
+              width={200}
+              height={75}
+              className="object-contain object-left w-auto h-14 mb-4"
             />
             <p className="text-sm leading-relaxed mb-3 text-gray-300">
               From U.S. Recovery to Global Production
