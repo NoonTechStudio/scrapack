@@ -2,16 +2,29 @@
 // Original theme backup: git stash or
 // revert to previous commit if needed
 
+import Image from "next/image";
 import Link from "next/link";
 
 export default function ServicesHero() {
   return (
     <section
-      className="pt-24"
+      className="pt-0 md:pt-24"
       style={{
         background: "linear-gradient(135deg, #FDFAF4, #F1F8E9 50%, #FFF8F0)",
       }}
     >
+      {/* Mobile header */}
+      <div className="md:hidden flex items-center px-5 pt-4 pb-3 bg-white border-b border-gray-100">
+        <Image
+          src="/upgrade-logo.png"
+          alt="ScraPack Solutions LLC"
+          width={130}
+          height={48}
+          className="object-contain object-left w-auto h-10"
+          priority
+        />
+      </div>
+
       {/* Breadcrumb */}
       <div className="max-w-6xl mx-auto px-6 pt-6">
         <nav className="flex items-center gap-2 text-sm" style={{ color: "#6B7280" }}>

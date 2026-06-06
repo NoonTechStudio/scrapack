@@ -29,7 +29,7 @@ export default function Navbar() {
   return (
     <>
       <nav className={`
-        fixed top-0 left-0 right-0 z-50
+        hidden md:block fixed top-0 left-0 right-0 z-50
         transition-all duration-500 ease-in-out
         ${scrolled
           ? 'bg-white/15 backdrop-blur-2xl border-b border-white/20 shadow-lg shadow-black/5'
