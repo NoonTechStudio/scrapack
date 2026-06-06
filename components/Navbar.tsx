@@ -40,15 +40,29 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-24">
 
             {/* LOGO */}
+            {/* TODO: Replace upgrade-logo.png with transparent background version once client provides it. Then remove all white wrapper divs around logo. */}
             <Link href="/" className="flex-shrink-0 flex items-center">
-              <Image
-                src="/upgrade-logo.png"
-                alt="ScraPack Solutions LLC"
-                width={220}
-                height={80}
-                className="object-contain object-left w-auto h-16"
-                priority
-              />
+              {!scrolled ? (
+                <div className="bg-white/90 rounded-2xl px-3 py-2 shadow-sm backdrop-blur-sm">
+                  <Image
+                    src="/upgrade-logo.png"
+                    alt="ScraPack Solutions LLC"
+                    width={200}
+                    height={68}
+                    className="object-contain object-left w-auto h-14"
+                    priority
+                  />
+                </div>
+              ) : (
+                <Image
+                  src="/upgrade-logo.png"
+                  alt="ScraPack Solutions LLC"
+                  width={220}
+                  height={80}
+                  className="object-contain object-left w-auto h-16"
+                  priority
+                />
+              )}
             </Link>
 
             {/* DESKTOP NAV LINKS */}
