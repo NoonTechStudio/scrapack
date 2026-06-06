@@ -26,7 +26,7 @@ export default function HeroSection() {
           />
         </div>
         <a
-          href="https://wa.me/12155550000"
+          href="https://wa.me/12019142222"
           className="flex items-center gap-2 bg-green-500 text-white text-xs font-semibold px-4 py-2 rounded-full shadow-md"
         >
           <svg width="14" height="14" viewBox="0 0 24 24" fill="white">

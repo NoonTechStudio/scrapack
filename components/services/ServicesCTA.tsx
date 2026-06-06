@@ -32,7 +32,7 @@ export default function ServicesCTA() {
             Request a Quote
           </a>
           <a
-            href="https://wa.me/12155550000"
+            href="https://wa.me/12019142222"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2.5 px-10 py-5 rounded-full font-bold text-lg text-white bg-[#1B5E20] hover:bg-[#2E7D32] transition-colors duration-200 hover:scale-105 active:scale-95"
