@@ -31,9 +31,9 @@ export default function Footer() {
             <Image
               src="/upgrade-logo.png"
               alt="ScraPack Solutions LLC"
-              width={200}
-              height={75}
-              className="object-contain object-left w-auto h-14 mb-4"
+              width={220}
+              height={76}
+              className="object-contain object-left w-auto h-16 mb-4"
             />
             <p className="text-sm leading-relaxed mb-3 text-gray-300">
               From U.S. Recovery to Global Production

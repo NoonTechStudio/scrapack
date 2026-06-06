@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function HeroSection() {
   return (
     <section
-      className="relative min-h-screen flex flex-col md:justify-center overflow-hidden pt-0 md:pt-28"
+      className="relative min-h-screen flex flex-col md:justify-center overflow-hidden pt-28 md:pt-32"
       style={{
         background:
           "linear-gradient(135deg, #FDFAF4 0%, #F1F8E9 40%, #FFF8F0 100%)",
@@ -15,13 +15,13 @@ export default function HeroSection() {
     >
       {/* Mobile header — logo + WhatsApp quick link */}
       <div className="md:hidden flex items-center justify-between px-5 pt-6 pb-3 relative z-20">
-        <div className="bg-white rounded-2xl px-3 py-2 shadow-sm">
+        <div className="flex-shrink-0 flex items-center">
           <Image
             src="/upgrade-logo.png"
             alt="ScraPack Solutions LLC"
-            width={150}
-            height={50}
-            className="object-contain object-left w-auto h-10"
+            width={200}
+            height={70}
+            className="object-contain object-left w-auto h-16"
             priority
           />
         </div>
