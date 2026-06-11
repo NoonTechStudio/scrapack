@@ -43,20 +43,20 @@ export default function Navbar() {
             <Link href="/" className="flex-shrink-0 flex items-center">
               {!scrolled ? (
                 <Image
-                  src="/Logo8.png"
+                  src="/upgrade-logo.png"
                   alt="ScraPack Solutions LLC"
-                  width={260}
-                  height={90}
-                  className="object-contain object-left w-auto h-20"
+                  width={240}
+                  height={80}
+                  className="object-contain object-left w-auto h-16 md:h-20"
                   priority
                 />
               ) : (
                 <Image
-                  src="/Logo8.png"
+                  src="/upgrade-logo.png"
                   alt="ScraPack Solutions LLC"
-                  width={220}
-                  height={76}
-                  className="object-contain object-left w-auto h-16"
+                  width={200}
+                  height={68}
+                  className="object-contain object-left w-auto h-14 md:h-16"
                   priority
                 />
               )}
