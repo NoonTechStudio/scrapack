@@ -71,7 +71,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-12">
 
             {/* US Suppliers */}
-            <div className="reveal reveal-delay-1 bg-white rounded-3xl p-8 border-t-4 border-[#2E7D32] text-left">
+            <div className="bg-white rounded-3xl p-8 border-t-4 border-[#2E7D32] text-left shadow-sm">
               <div className="text-4xl">♻️</div>
               <h3 className="text-2xl font-black text-[#1A2E1A] mt-4">
                 US OCC Recyclers &amp; Exporters
@@ -96,7 +96,7 @@ export default function ContactPage() {
             </div>
 
             {/* Indian Buyers */}
-            <div className="reveal reveal-delay-2 bg-white rounded-3xl p-8 border-t-4 border-[#E8820C] text-left">
+            <div className="bg-white rounded-3xl p-8 border-t-4 border-[#E8820C] text-left shadow-sm">
               <div className="text-4xl">🏭</div>
               <h3 className="text-2xl font-black text-[#1A2E1A] mt-4">
                 Indian Paper Mills &amp; Traders
@@ -132,7 +132,7 @@ export default function ContactPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-10">
 
-            <div className="reveal reveal-delay-1 bg-[#FDFAF4] rounded-2xl p-6 border border-gray-100 text-left">
+            <div className="bg-[#FDFAF4] rounded-2xl p-6 border border-gray-100 text-left">
               <div className="text-2xl mb-3">⏱️</div>
               <h3 className="font-black text-[#1A2E1A]">How fast do you respond?</h3>
               <p className="text-[#6B7280] text-sm mt-2">
@@ -140,7 +140,7 @@ export default function ContactPage() {
               </p>
             </div>
 
-            <div className="reveal reveal-delay-2 bg-[#FDFAF4] rounded-2xl p-6 border border-gray-100 text-left">
+            <div className="bg-[#FDFAF4] rounded-2xl p-6 border border-gray-100 text-left">
               <div className="text-2xl mb-3">📦</div>
               <h3 className="font-black text-[#1A2E1A]">What is minimum order?</h3>
               <p className="text-[#6B7280] text-sm mt-2">
@@ -148,7 +148,7 @@ export default function ContactPage() {
               </p>
             </div>
 
-            <div className="reveal reveal-delay-3 bg-[#FDFAF4] rounded-2xl p-6 border border-gray-100 text-left">
+            <div className="bg-[#FDFAF4] rounded-2xl p-6 border border-gray-100 text-left">
               <div className="text-2xl mb-3">🌏</div>
               <h3 className="font-black text-[#1A2E1A]">Which Indian ports do you serve?</h3>
               <p className="text-[#6B7280] text-sm mt-2">
