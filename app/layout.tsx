@@ -13,11 +13,21 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "ScraPack Solutions LLC | OCC Export Trading — USA to India",
-  description:
-    "Philadelphia-based OCC export company. We export OCC Grade 11 & Grade 12 scrap material from the USA to India. Connecting US recyclers with Indian paper mills.",
-  keywords:
-    "OCC export, OCC Grade 11, OCC Grade 12, old corrugated cardboard, USA to India export, paper mill supply, scrap trading",
+  title: 'ScraPack Solutions LLC | OCC Export Trading — USA to India',
+  description: 'ScraPack Solutions LLC — Philadelphia-based OCC export trading company. We export OCC Grade 11 & 12 from the USA to paper mills across India.',
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/icon.png',
+    shortcut: '/favicon.ico',
+  },
+  openGraph: {
+    title: 'ScraPack Solutions LLC | OCC Export Trading',
+    description: 'Connecting US OCC recyclers with Indian paper mills. Export Grade 11 & 12 from Philadelphia to India.',
+    url: 'https://scrapack.vercel.app',
+    siteName: 'ScraPack Solutions LLC',
+    locale: 'en_US',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({
