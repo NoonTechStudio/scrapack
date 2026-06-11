@@ -43,7 +43,7 @@ export default function Navbar() {
             <Link href="/" className="flex-shrink-0 flex items-center">
               {!scrolled ? (
                 <Image
-                  src="/upgrade-logo.png"
+                  src="/Logo8.png"
                   alt="ScraPack Solutions LLC"
                   width={240}
                   height={80}
@@ -52,7 +52,7 @@ export default function Navbar() {
                 />
               ) : (
                 <Image
-                  src="/upgrade-logo.png"
+                  src="/Logo8.png"
                   alt="ScraPack Solutions LLC"
                   width={200}
                   height={68}

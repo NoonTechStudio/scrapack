@@ -16,7 +16,7 @@ export default function ServicesHero() {
       {/* Mobile header */}
       <div className="md:hidden flex items-center px-5 pt-4 pb-3 bg-white border-b border-gray-100">
         <Image
-          src="/upgrade-logo.png"
+          src="/Logo8.png"
           alt="ScraPack Solutions LLC"
           width={130}
           height={48}
