@@ -2,9 +2,20 @@ import ContactForm from "@/components/contact/ContactForm";
 import ContactInfo from "@/components/contact/ContactInfo";
 
 export const metadata = {
-  title: 'Contact Us | ScraPack Solutions LLC',
+  title: 'Request a Quote | ScraPack Solutions LLC — OCC Export USA to India',
   description:
-    'Get in touch with ScraPack Solutions LLC. Request a quote for OCC Grade 11 & 12 export from USA to India. Contact us via WhatsApp, email, or our online quote form.',
+    'Request a free OCC export quote from ScraPack Solutions LLC. We export OCC Grade 11 & 12 corrugated cardboard from Philadelphia, USA to Indian paper mills. Contact us via WhatsApp, email, or our online quote form.',
+  keywords: 'OCC export quote, request OCC price, corrugated cardboard export India, OCC Grade 11 price, OCC Grade 12 export quote, US recycler India buyer',
+  openGraph: {
+    title: 'Request a Quote | ScraPack Solutions LLC',
+    description: 'Get a competitive OCC export quote. We connect US OCC recyclers with Indian paper mills — Grade 11 & 12 from Philadelphia to India.',
+    url: 'https://scrapacksolutions.com/contact',
+    siteName: 'ScraPack Solutions LLC',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://scrapacksolutions.com/contact',
+  },
 };
 
 export default function ContactPage() {
@@ -44,7 +55,7 @@ export default function ContactPage() {
       </section>
 
       {/* ══ SECTION 2 — MAIN CONTENT ══ */}
-      <section className="bg-white py-12 md:py-16">
+      <section id="quote-form" className="bg-white py-12 md:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
           <div className="lg:col-span-3">
             <ContactForm />

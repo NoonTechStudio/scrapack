@@ -11,9 +11,20 @@ import ServicesFAQ from "@/components/services/ServicesFAQ";
 import ServicesCTA from "@/components/services/ServicesCTA";
 
 export const metadata = {
-  title: "Services | ScraPack Solutions LLC",
+  title: "OCC Export Services | ScraPack Solutions LLC — Grade 11 & 12",
   description:
-    "ScraPack Solutions offers OCC Grade 11 and Grade 12 export services from the USA to India. Full-service OCC trading — sourcing, baling, documentation, and shipping.",
+    "ScraPack Solutions offers full-service OCC export from the USA to India. We source, bale, document, and ship OCC Grade 11 and Grade 12 corrugated cardboard to Indian paper mills and traders.",
+  keywords: "OCC Grade 11 export, OCC Grade 12 export, corrugated cardboard baling USA, OCC export documentation, FCL shipping India, OCC sourcing Philadelphia",
+  openGraph: {
+    title: "OCC Export Services | ScraPack Solutions LLC",
+    description: "Full-service OCC Grade 11 & 12 export from USA to India — sourcing, baling, documentation, and FCL shipping to all major Indian ports.",
+    url: "https://scrapacksolutions.com/services",
+    siteName: "ScraPack Solutions LLC",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://scrapacksolutions.com/services",
+  },
 };
 
 export default function ServicesPage() {

@@ -85,7 +85,7 @@ export default function Navbar() {
             {/* CTA BUTTON */}
             <div className="hidden md:flex flex-shrink-0 items-center">
               <Link
-                href="/contact"
+                href="/contact#quote-form"
                 className="bg-[#E8820C] hover:bg-[#C96B00] text-white font-bold px-6 py-3 rounded-full text-sm transition-all duration-200 shadow-md shadow-[#E8820C]/20 hover:shadow-lg hover:shadow-[#E8820C]/30 whitespace-nowrap"
               >
                 Get a Quote
@@ -135,7 +135,7 @@ export default function Navbar() {
             ))}
             <div className="pt-3 pb-2">
               <Link
-                href="/contact"
+                href="/contact#quote-form"
                 onClick={() => setMenuOpen(false)}
                 className="block w-full text-center bg-[#E8820C] text-white font-bold py-3 rounded-full text-sm"
               >

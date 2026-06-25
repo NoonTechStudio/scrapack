@@ -120,7 +120,7 @@ export default function HeroSection() {
             {/* CTA buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-6">
               <a
-                href="/contact"
+                href="/contact#quote-form"
                 className="inline-flex items-center justify-center px-8 py-4 rounded-full font-bold text-lg text-white transition-all duration-200 hover:scale-105 active:scale-95 hover:bg-[#C96B00] w-full sm:w-auto"
                 style={{
                   backgroundColor: "#E8820C",

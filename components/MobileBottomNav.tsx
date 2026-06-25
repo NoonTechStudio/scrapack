@@ -53,7 +53,7 @@ const NAV_ITEMS = [
   },
   {
     label: "Quote",
-    href: "/contact",
+    href: "/contact#quote-form",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
         <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2v10z" />
@@ -82,7 +82,8 @@ export default function MobileBottomNav() {
         style={{ height: "64px" }}
       >
         {NAV_ITEMS.map(({ label, href, icon }) => {
-          const isActive = pathname === href;
+          const basePath = href.split('#')[0];
+          const isActive = pathname === basePath;
           return (
             <a
               key={href}
