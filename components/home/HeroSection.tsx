@@ -17,7 +17,7 @@ export default function HeroSection() {
       <div className="md:hidden flex items-center justify-between px-5 pt-6 pb-3 relative z-20">
         <div className="flex-shrink-0 flex items-center">
           <Image
-            src="/Logo8.png"
+            src="/NewLogo2.png"
             alt="ScraPack Solutions LLC"
             width={200}
             height={70}
