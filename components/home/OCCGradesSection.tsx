@@ -1,7 +1,3 @@
-// REVIEW VERSION — Logo6 Theme
-// Original theme backup: git stash or
-// revert to previous commit if needed
-
 "use client";
 
 import { useRef, useEffect } from "react";
@@ -14,13 +10,13 @@ const GRADES = [
     description:
       "The cleanest grade of corrugated containers, free from all contaminants. Double-sorted, low moisture, baled and strapped for export. Preferred by premium Indian paper mills.",
     specs: ["Double sorted", "Low moisture", "Baled & strapped", "Export ready", "Premium grade"],
-    topColor: "#2E7D32",
-    badgeBg: "#E8F5E9",
-    badgeColor: "#1B5E20",
-    watermarkColor: "rgba(46,125,50,0.06)",
-    specBg: "#F1F8E9",
-    specBorder: "rgba(46,125,50,0.20)",
-    specText: "#1B5E20",
+    topColor: "#217344",
+    badgeBg: "#E6F2EA",
+    badgeColor: "#175434",
+    watermarkColor: "rgba(33,115,68,0.06)",
+    specBg: "#F2F9F5",
+    specBorder: "rgba(33,115,68,0.20)",
+    specText: "#175434",
     linkText: "Request pricing for Grade 11 →",
   },
   {
@@ -30,13 +26,13 @@ const GRADES = [
     description:
       "Baled corrugated containers with standard sorting. Cost-effective for high-volume operations. Consistent supply with full export documentation.",
     specs: ["Standard sorting", "High volume", "Baled", "Export ready", "Cost effective"],
-    topColor: "#E8820C",
-    badgeBg: "#FFF3E0",
-    badgeColor: "#C96B00",
-    watermarkColor: "rgba(232,130,12,0.06)",
-    specBg: "#FFF8F0",
-    specBorder: "rgba(232,130,12,0.20)",
-    specText: "#7C2D12",
+    topColor: "#CC9F5F",
+    badgeBg: "#FAF0DF",
+    badgeColor: "#8A6224",
+    watermarkColor: "rgba(204,159,95,0.10)",
+    specBg: "#FDF8F0",
+    specBorder: "rgba(204,159,95,0.35)",
+    specText: "#6B4A15",
     linkText: "Request pricing for Grade 12 →",
   },
 ];
@@ -67,19 +63,14 @@ export default function OCCGradesSection() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-14 reveal">
-          <p
-            className="text-xs font-bold tracking-widest uppercase mb-3"
-            style={{ color: "#E8820C" }}
-          >
-            What We Export
-          </p>
+          <p className="eyebrow mb-3">What We Export</p>
           <h2
             className="text-4xl sm:text-5xl font-bold mb-4"
-            style={{ color: "#1A2E1A" }}
+            style={{ color: "#16281F" }}
           >
             Our OCC Products
           </h2>
-          <p className="text-lg max-w-xl mx-auto" style={{ color: "#6B7280" }}>
+          <p className="text-lg max-w-xl mx-auto" style={{ color: "#6C7A73" }}>
             Export-grade corrugated cardboard, sourced and baled across the
             United States.
           </p>
@@ -139,12 +130,12 @@ export default function OCCGradesSection() {
 
                     <h3
                       className="text-2xl font-bold mt-4 mb-3"
-                      style={{ color: "#1A2E1A" }}
+                      style={{ color: "#16281F" }}
                     >
                       {title}
                     </h3>
 
-                    <p className="text-sm leading-relaxed mb-6" style={{ color: "#6B7280" }}>
+                    <p className="text-sm leading-relaxed mb-6" style={{ color: "#6C7A73" }}>
                       {description}
                     </p>
 
@@ -170,7 +161,7 @@ export default function OCCGradesSection() {
                       <a
                         href="/contact"
                         className="text-sm font-semibold transition-colors hover:opacity-80"
-                        style={{ color: "#E8820C" }}
+                        style={{ color: "#8A6224" }}
                       >
                         {linkText}
                       </a>

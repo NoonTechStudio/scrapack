@@ -1,7 +1,3 @@
-// REVIEW VERSION — Logo6 Theme
-// Original theme backup: git stash or
-// revert to previous commit if needed
-
 "use client";
 
 import { useState } from "react";
@@ -59,13 +55,13 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
       >
-        <span className="font-semibold pr-4" style={{ color: "#1A2E1A" }}>
+        <span className="font-semibold pr-4" style={{ color: "#16281F" }}>
           {question}
         </span>
         <span
           className="flex-shrink-0 font-bold text-xl transition-transform duration-200"
           style={{
-            color: "#E8820C",
+            color: "#8A6224",
             transform: open ? "rotate(45deg)" : "rotate(0deg)",
           }}
         >
@@ -76,7 +72,7 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
       {open && (
         <div
           className="px-6 pb-6 border-t border-gray-100 leading-relaxed"
-          style={{ color: "#6B7280" }}
+          style={{ color: "#6C7A73" }}
         >
           <p className="pt-4">{answer}</p>
         </div>
@@ -87,17 +83,17 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
 
 export default function ServicesFAQ() {
   return (
-    <section className="py-24 px-6 lg:px-12" style={{ backgroundColor: "#FDFAF4" }}>
+    <section className="py-24 px-6 lg:px-12" style={{ backgroundColor: "#FBF8F2" }}>
       <div className="max-w-3xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: "#E8820C" }}>
+          <p className="eyebrow mb-3" style={{ color: "#8A6224" }}>
             COMMON QUESTIONS
           </p>
-          <h2 className="text-4xl sm:text-5xl font-black" style={{ color: "#1A2E1A" }}>
+          <h2 className="text-4xl sm:text-5xl font-black" style={{ color: "#16281F" }}>
             Frequently Asked Questions
           </h2>
-          <p className="text-xl mt-6" style={{ color: "#6B7280" }}>
+          <p className="text-xl mt-6" style={{ color: "#6C7A73" }}>
             Everything you need to know about working with ScraPack.
           </p>
         </div>

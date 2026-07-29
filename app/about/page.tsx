@@ -7,13 +7,13 @@ import MeetFounder from "@/components/about/MeetFounder";
 import AboutCTA from "@/components/about/AboutCTA";
 
 export const metadata = {
-  title: "About ScraPack Solutions LLC | OCC Export Trading Company",
+  title: "About ScraPack Solutions LLC | OCC & Scrap Tire Export Company",
   description:
-    "ScraPack Solutions LLC is a Philadelphia-based OCC export trading company founded by Kashyap Patel. We connect US OCC recyclers with Indian paper mills, exporting Grade 11 & 12 corrugated cardboard.",
-  keywords: "ScraPack Solutions LLC, OCC trading company Philadelphia, Kashyap Patel OCC exporter, US India cardboard trade, OCC recycling company USA",
+    "ScraPack Solutions LLC is a Philadelphia-based export trading company founded by Kashyap Patel. We connect US recyclers with paper mills and rubber processors worldwide, exporting OCC Grade 11 & 12 and baled scrap tires.",
+  keywords: "ScraPack Solutions LLC, OCC trading company Philadelphia, Kashyap Patel OCC exporter, US India cardboard trade, OCC recycling company USA, scrap tire exporter USA, baled scrap tires supplier",
   openGraph: {
-    title: "About ScraPack Solutions LLC | OCC Export Trading Company",
-    description: "Philadelphia-based OCC export trading company connecting US recyclers with Indian paper mills — founded by Kashyap Patel.",
+    title: "About ScraPack Solutions LLC | OCC & Scrap Tire Export Company",
+    description: "Philadelphia-based export trading company connecting US recyclers with paper mills and rubber processors worldwide — founded by Kashyap Patel.",
     url: "https://scrapacksolutions.com/about",
     siteName: "ScraPack Solutions LLC",
     type: "website",

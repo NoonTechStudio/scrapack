@@ -32,7 +32,7 @@ export default function Navbar() {
         hidden md:block fixed top-0 left-0 right-0 z-50
         transition-all duration-500 ease-in-out
         ${scrolled
-          ? 'bg-white/15 backdrop-blur-2xl border-b border-white/20 shadow-lg shadow-black/5'
+          ? 'bg-[#FBF8F2]/80 backdrop-blur-2xl border-b border-[#274C56]/10 shadow-sm'
           : 'bg-transparent backdrop-blur-none border-b border-transparent shadow-none'
         }
       `}>
@@ -48,7 +48,7 @@ export default function Navbar() {
                   width={240}
                   height={80}
                   className="object-contain object-left w-auto h-16 md:h-20"
-                  priority
+                  preload
                 />
               ) : (
                 <Image
@@ -57,7 +57,7 @@ export default function Navbar() {
                   width={200}
                   height={68}
                   className="object-contain object-left w-auto h-14 md:h-16"
-                  priority
+                  preload
                 />
               )}
             </Link>
@@ -69,15 +69,22 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   className={`
-                    text-sm font-semibold
+                    relative text-sm font-semibold py-1
                     transition-colors duration-200
                     ${pathname === link.href
-                      ? 'text-[#E8820C]'
-                      : 'text-[#1A2E1A] hover:text-[#E8820C]'
+                      ? 'text-[#217344]'
+                      : 'text-[#16281F]/80 hover:text-[#217344]'
                     }
                   `}
                 >
                   {link.label}
+                  <span
+                    className={`
+                      absolute -bottom-0.5 left-0 h-0.5 rounded-full bg-[#E8BA74]
+                      transition-all duration-300
+                      ${pathname === link.href ? 'w-full' : 'w-0'}
+                    `}
+                  />
                 </Link>
               ))}
             </div>
@@ -86,7 +93,7 @@ export default function Navbar() {
             <div className="hidden md:flex flex-shrink-0 items-center">
               <Link
                 href="/contact#quote-form"
-                className="bg-[#E8820C] hover:bg-[#C96B00] text-white font-bold px-6 py-3 rounded-full text-sm transition-all duration-200 shadow-md shadow-[#E8820C]/20 hover:shadow-lg hover:shadow-[#E8820C]/30 whitespace-nowrap"
+                className="btn btn-gold btn-sm"
               >
                 Get a Quote
               </Link>
@@ -98,9 +105,9 @@ export default function Navbar() {
               className="md:hidden flex flex-col gap-1.5 p-2"
               aria-label="Toggle menu"
             >
-              <span className={`block w-6 h-0.5 bg-[#1A2E1A] transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
-              <span className={`block w-6 h-0.5 bg-[#1A2E1A] transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
-              <span className={`block w-6 h-0.5 bg-[#1A2E1A] transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+              <span className={`block w-6 h-0.5 bg-[#16281F] transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
+              <span className={`block w-6 h-0.5 bg-[#16281F] transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
+              <span className={`block w-6 h-0.5 bg-[#16281F] transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
             </button>
 
           </div>
@@ -125,8 +132,8 @@ export default function Navbar() {
                   text-sm font-semibold
                   transition-colors duration-200
                   ${pathname === link.href
-                    ? 'bg-[#E8820C]/10 text-[#E8820C]'
-                    : 'text-[#1A2E1A] hover:bg-gray-50'
+                    ? 'bg-[#E6F2EA] text-[#217344]'
+                    : 'text-[#16281F] hover:bg-[#FBF8F2]'
                   }
                 `}
               >
@@ -137,7 +144,7 @@ export default function Navbar() {
               <Link
                 href="/contact#quote-form"
                 onClick={() => setMenuOpen(false)}
-                className="block w-full text-center bg-[#E8820C] text-white font-bold py-3 rounded-full text-sm"
+                className="btn btn-gold btn-sm w-full"
               >
                 Get a Quote
               </Link>

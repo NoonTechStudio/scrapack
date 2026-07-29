@@ -1,15 +1,20 @@
-// REVIEW VERSION — Logo6 Theme
-// Original theme backup: git stash or
-// revert to previous commit if needed
-
 "use client";
 
 import { useRef, useEffect } from "react";
+import {
+  CheckIcon,
+  ContainerIcon,
+  DocumentIcon,
+  InspectIcon,
+  BaleIcon,
+  ShipIcon,
+  VerifiedIcon,
+} from "@/components/icons";
 
 const SERVICES = [
   {
-    icon: "🔍",
-    iconBg: "#E8F5E9",
+    Icon: InspectIcon,
+    tile: "icon-tile-green",
     number: "01",
     title: "OCC Sourcing & Procurement",
     description:
@@ -22,8 +27,8 @@ const SERVICES = [
     ],
   },
   {
-    icon: "📋",
-    iconBg: "#FFF3E0",
+    Icon: VerifiedIcon,
+    tile: "icon-tile-kraft",
     number: "02",
     title: "Grading & Quality Inspection",
     description:
@@ -36,8 +41,8 @@ const SERVICES = [
     ],
   },
   {
-    icon: "📦",
-    iconBg: "#E8F5E9",
+    Icon: BaleIcon,
+    tile: "icon-tile-green",
     number: "03",
     title: "Baling & Export Packing",
     description:
@@ -50,8 +55,8 @@ const SERVICES = [
     ],
   },
   {
-    icon: "🚛",
-    iconBg: "#FFF3E0",
+    Icon: ContainerIcon,
+    tile: "icon-tile-kraft",
     number: "04",
     title: "Container Stuffing & Loading",
     description:
@@ -64,8 +69,8 @@ const SERVICES = [
     ],
   },
   {
-    icon: "📄",
-    iconBg: "#E8F5E9",
+    Icon: DocumentIcon,
+    tile: "icon-tile-green",
     number: "05",
     title: "Export Documentation",
     description:
@@ -80,8 +85,8 @@ const SERVICES = [
     ],
   },
   {
-    icon: "🚢",
-    iconBg: "#FFF3E0",
+    Icon: ShipIcon,
+    tile: "icon-tile-kraft",
     number: "06",
     title: "Shipping & Port Coordination",
     description:
@@ -117,14 +122,12 @@ export default function CoreServices() {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-6 reveal">
-          <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: "#E8820C" }}>
-            CORE SERVICES
-          </p>
-          <h2 className="text-4xl sm:text-5xl font-black" style={{ color: "#1A2E1A" }}>
+          <p className="eyebrow mb-3">Core Services</p>
+          <h2 className="text-4xl sm:text-5xl font-black" style={{ color: "#16281F" }}>
             Everything You Need,<br />Under One Roof
           </h2>
-          <p className="text-xl mt-6 max-w-2xl mx-auto" style={{ color: "#6B7280" }}>
-            ScraPack is not a broker. We are your end-to-end OCC export partner.
+          <p className="text-xl mt-6 max-w-2xl mx-auto" style={{ color: "#6C7A73" }}>
+            ScraPack is not a broker. We are your end-to-end recovered-material export partner.
           </p>
         </div>
 
@@ -136,33 +139,33 @@ export default function CoreServices() {
               className={`reveal reveal-delay-${(i % 3) + 1} bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300`}
             >
               {/* Icon */}
-              <div
-                className="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl"
-                style={{ backgroundColor: svc.iconBg }}
-              >
-                {svc.icon}
+              <div className={`icon-tile ${svc.tile} w-14 h-14`}>
+                <svc.Icon size={26} />
               </div>
 
               {/* Number */}
-              <p className="text-xs font-bold tracking-widest mt-6" style={{ color: "#E8820C" }}>
+              <p className="text-xs font-bold tracking-widest mt-6" style={{ color: "#8A6224" }}>
                 {svc.number}
               </p>
 
               {/* Title */}
-              <h3 className="text-xl font-black mt-1" style={{ color: "#1A2E1A" }}>
+              <h3 className="text-xl font-black mt-1" style={{ color: "#16281F" }}>
                 {svc.title}
               </h3>
 
               {/* Description */}
-              <p className="leading-relaxed mt-3 text-sm" style={{ color: "#6B7280" }}>
+              <p className="leading-relaxed mt-3 text-sm" style={{ color: "#6C7A73" }}>
                 {svc.description}
               </p>
 
               {/* Features */}
               <ul className="mt-4 space-y-2">
                 {svc.features.map((f) => (
-                  <li key={f} className="flex items-center gap-2 text-sm" style={{ color: "#4A5568" }}>
-                    <span style={{ color: "#2E7D32" }}>✓</span> {f}
+                  <li key={f} className="flex items-start gap-2 text-sm" style={{ color: "#46554E" }}>
+                    <span className="shrink-0 mt-0.5" style={{ color: "#217344" }}>
+                      <CheckIcon size={13} strokeWidth={2.6} />
+                    </span>
+                    {f}
                   </li>
                 ))}
               </ul>
@@ -170,8 +173,8 @@ export default function CoreServices() {
               {/* Learn more */}
               <a
                 href="/contact"
-                className="inline-block mt-6 text-sm font-semibold"
-                style={{ color: "#E8820C" }}
+                className="inline-block mt-6 text-sm font-bold transition-colors hover:text-[#217344]"
+                style={{ color: "#8A6224" }}
               >
                 Learn more →
               </a>

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
+import { LockIcon } from '@/components/icons';
 
 const STEPS = ['Your Info', 'Trade Details', 'Requirements'];
 
@@ -28,17 +29,24 @@ const INITIAL_FORM: FormState = {
 };
 
 function roleLabel(role: string) {
-  if (role === 'us-supplier') return 'US OCC Recycler';
-  if (role === 'indian-buyer') return 'Indian Mill/Trader';
+  if (role === 'us-supplier') return 'US Recycler / Collector';
+  if (role === 'indian-buyer') return 'Mill / Processor / Trader';
   if (role === 'broker') return 'Broker/Agent';
   return 'Other';
 }
 
+const GRADE_LABELS: Record<string, string> = {
+  'grade-11': 'OCC Grade 11',
+  'grade-12': 'OCC Grade 12',
+  both: 'OCC Grade 11 & 12',
+  'tires-pcr': 'PCR Tire Bales',
+  'tires-mixed': 'Mixed Tire Bales',
+  'tires-truck': 'Truck Tire Bales',
+  'tires-whole': 'Whole Scrap Tires',
+};
+
 function gradeLabel(grade: string) {
-  if (grade === 'grade-11') return 'OCC Grade 11';
-  if (grade === 'grade-12') return 'OCC Grade 12';
-  if (grade === 'both') return 'Grade 11 & 12';
-  return 'Not sure yet';
+  return GRADE_LABELS[grade] ?? 'Not sure yet';
 }
 
 export default function ContactForm() {
@@ -79,8 +87,8 @@ export default function ContactForm() {
   }
 
   const fieldClass =
-    'w-full px-4 py-3 rounded-xl border border-gray-200 bg-[#FDFAF4] text-[#1A2E1A] text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#2E7D32]/30 focus:border-[#2E7D32] transition-all duration-200';
-  const labelClass = 'text-sm font-semibold text-[#1A2E1A]';
+    'w-full px-4 py-3 rounded-xl border border-gray-200 bg-[#FBF8F2] text-[#16281F] text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#217344]/30 focus:border-[#217344] transition-all duration-200';
+  const labelClass = 'text-sm font-semibold text-[#16281F]';
 
   const isStep0Valid = !!(form.fullName && form.email && form.phone && form.role);
   const isStep1Valid = !!form.grade;
@@ -91,47 +99,47 @@ export default function ContactForm() {
       {submitted ? (
         /* ── SUCCESS SCREEN ── */
         <div className="p-8 md:p-10 text-center py-10">
-          <div className="w-24 h-24 bg-[#E8F5E9] rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg className="w-12 h-12 text-[#2E7D32]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="w-24 h-24 bg-[#E6F2EA] rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg className="w-12 h-12 text-[#217344]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
           </div>
-          <div className="inline-flex items-center gap-2 bg-[#E8F5E9] text-[#1B5E20] text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-4">
+          <div className="inline-flex items-center gap-2 bg-[#E6F2EA] text-[#175434] text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-4">
             Quote Request Received
           </div>
-          <h3 className="text-3xl font-black text-[#1A2E1A]">
+          <h3 className="text-3xl font-black text-[#16281F]">
             Thank You{form.fullName ? `, ${form.fullName.split(' ')[0]}` : ''}!
           </h3>
-          <p className="text-[#6B7280] mt-3 leading-relaxed max-w-sm mx-auto">
+          <p className="text-[#6C7A73] mt-3 leading-relaxed max-w-sm mx-auto">
             We have received your quote request and will get back to you within{' '}
-            <strong className="text-[#1A2E1A]">24 business hours</strong> with a competitive offer.
+            <strong className="text-[#16281F]">24 business hours</strong> with a competitive offer.
           </p>
 
-          <div className="mt-8 bg-[#FDFAF4] rounded-2xl p-5 text-left max-w-sm mx-auto border border-gray-100">
-            <p className="text-xs font-bold tracking-widest uppercase text-[#E8820C] mb-3">Your Request Summary</p>
+          <div className="mt-8 bg-[#FBF8F2] rounded-2xl p-5 text-left max-w-sm mx-auto border border-gray-100">
+            <p className="text-xs font-bold tracking-widest uppercase text-[#8A6224] mb-3">Your Request Summary</p>
             <div className="space-y-2 text-sm">
               {form.company && (
                 <div className="flex justify-between">
-                  <span className="text-[#6B7280]">Company</span>
-                  <span className="font-semibold text-[#1A2E1A]">{form.company}</span>
+                  <span className="text-[#6C7A73]">Company</span>
+                  <span className="font-semibold text-[#16281F]">{form.company}</span>
                 </div>
               )}
               {form.role && (
                 <div className="flex justify-between">
-                  <span className="text-[#6B7280]">Role</span>
-                  <span className="font-semibold text-[#1A2E1A]">{roleLabel(form.role)}</span>
+                  <span className="text-[#6C7A73]">Role</span>
+                  <span className="font-semibold text-[#16281F]">{roleLabel(form.role)}</span>
                 </div>
               )}
               {form.grade && (
                 <div className="flex justify-between">
-                  <span className="text-[#6B7280]">Grade</span>
-                  <span className="font-semibold text-[#1A2E1A]">{gradeLabel(form.grade)}</span>
+                  <span className="text-[#6C7A73]">Grade</span>
+                  <span className="font-semibold text-[#16281F]">{gradeLabel(form.grade)}</span>
                 </div>
               )}
               {form.quantity && (
                 <div className="flex justify-between">
-                  <span className="text-[#6B7280]">Volume</span>
-                  <span className="font-semibold text-[#1A2E1A]">{form.quantity}</span>
+                  <span className="text-[#6C7A73]">Volume</span>
+                  <span className="font-semibold text-[#16281F]">{form.quantity}</span>
                 </div>
               )}
             </div>
@@ -151,7 +159,7 @@ export default function ContactForm() {
             </a>
             <button
               onClick={handleReset}
-              className="border-2 border-[#1B5E20] text-[#1B5E20] font-bold px-6 py-3 rounded-full text-sm cursor-pointer"
+              className="border-2 border-[#175434] text-[#175434] font-bold px-6 py-3 rounded-full text-sm cursor-pointer"
             >
               Submit Another Request
             </button>
@@ -161,10 +169,10 @@ export default function ContactForm() {
         /* ── MULTI-STEP FORM ── */
         <>
           {/* Header banner */}
-          <div className="bg-gradient-to-r from-[#1B5E20] to-[#2E7D32] px-8 md:px-10 py-6">
-            <p className="text-green-300 text-xs font-bold tracking-widest uppercase">OCC EXPORT QUOTE REQUEST</p>
+          <div className="bg-gradient-to-r from-[#175434] to-[#217344] px-8 md:px-10 py-6">
+            <p className="text-xs font-bold tracking-[0.18em] uppercase" style={{ color: "#E8BA74" }}>Export Quote Request</p>
             <h2 className="text-2xl md:text-3xl font-black text-white mt-1">Request a Quote</h2>
-            <p className="text-green-200 text-sm mt-1">We respond within 24 hours with a competitive offer.</p>
+            <p className="text-white/70 text-sm mt-1">We respond within 24 hours with a competitive offer.</p>
 
             {/* Step indicator */}
             <div className="flex items-center gap-0 mt-5">
@@ -172,7 +180,7 @@ export default function ContactForm() {
                 <div key={i} className="flex items-center flex-1 last:flex-none">
                   <div className="flex flex-col items-center">
                     <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-black transition-all duration-300 ${
-                      i < step ? 'bg-[#E8820C] text-white' : i === step ? 'bg-white text-[#1B5E20]' : 'bg-white/20 text-white/50'
+                      i < step ? 'bg-[#E8BA74] text-[#16281F]' : i === step ? 'bg-white text-[#175434]' : 'bg-white/20 text-white/50'
                     }`}>
                       {i < step ? (
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -183,7 +191,7 @@ export default function ContactForm() {
                     <span className={`text-[10px] mt-1 font-semibold whitespace-nowrap ${i === step ? 'text-white' : 'text-white/50'}`}>{label}</span>
                   </div>
                   {i < STEPS.length - 1 && (
-                    <div className={`flex-1 h-0.5 mx-2 mb-4 transition-all duration-300 ${i < step ? 'bg-[#E8820C]' : 'bg-white/20'}`} />
+                    <div className={`flex-1 h-0.5 mx-2 mb-4 transition-all duration-300 ${i < step ? 'bg-[#E8BA74]' : 'bg-white/20'}`} />
                   )}
                 </div>
               ))}
@@ -226,8 +234,8 @@ export default function ContactForm() {
                     <label className={labelClass}>I am a... <span className="text-red-400">*</span></label>
                     <select name="role" value={form.role} onChange={handleChange} className={fieldClass} required>
                       <option value="">Select your role</option>
-                      <option value="us-supplier">US OCC Recycler / Exporter</option>
-                      <option value="indian-buyer">Indian Paper Mill / Trader</option>
+                      <option value="us-supplier">US Recycler / Collector / Exporter</option>
+                      <option value="indian-buyer">Paper Mill / Rubber Processor / Trader</option>
                       <option value="broker">Broker / Agent</option>
                       <option value="other">Other</option>
                     </select>
@@ -259,7 +267,7 @@ export default function ContactForm() {
                   type="button"
                   disabled={!isStep0Valid}
                   onClick={() => setStep(1)}
-                  className="w-full bg-[#E8820C] hover:bg-[#C96B00] disabled:opacity-40 disabled:cursor-not-allowed text-white font-bold py-4 rounded-xl text-base transition-all duration-200 shadow-lg shadow-[#E8820C]/25 hover:shadow-xl hover:-translate-y-0.5 cursor-pointer"
+                  className="w-full btn btn-gold py-4 rounded-xl text-base disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
                 >
                   Next: Trade Details →
                 </button>
@@ -271,12 +279,20 @@ export default function ContactForm() {
               <>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="flex flex-col gap-1.5">
-                    <label className={labelClass}>OCC Grade Required <span className="text-red-400">*</span></label>
+                    <label className={labelClass}>Material & Grade Required <span className="text-red-400">*</span></label>
                     <select name="grade" value={form.grade} onChange={handleChange} className={fieldClass} required>
-                      <option value="">Select OCC grade</option>
-                      <option value="grade-11">OCC Grade 11 — Double-Sorted</option>
-                      <option value="grade-12">OCC Grade 12 — Regular</option>
-                      <option value="both">Both Grade 11 &amp; 12</option>
+                      <option value="">Select material / grade</option>
+                      <optgroup label="OCC — Corrugated Cardboard">
+                        <option value="grade-11">OCC Grade 11 — Double-Sorted</option>
+                        <option value="grade-12">OCC Grade 12 — Regular</option>
+                        <option value="both">Both Grade 11 &amp; 12</option>
+                      </optgroup>
+                      <optgroup label="Scrap Tires">
+                        <option value="tires-pcr">Passenger Car (PCR) Tire Bales</option>
+                        <option value="tires-mixed">Mixed Tire Bales (PCR / LTR / SUV)</option>
+                        <option value="tires-truck">Truck Tire Bales</option>
+                        <option value="tires-whole">Whole Scrap Tires (unbaled)</option>
+                      </optgroup>
                       <option value="not-sure">Not sure yet</option>
                     </select>
                   </div>
@@ -320,15 +336,17 @@ export default function ContactForm() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="flex flex-col gap-1.5">
-                    <label className={labelClass}>Port of Discharge (India)</label>
+                    <label className={labelClass}>Port of Discharge</label>
                     <select name="port" value={form.port} onChange={handleChange} className={fieldClass}>
                       <option value="">Select port</option>
-                      <option value="nhava-sheva">Nhava Sheva (JNPT), Mumbai</option>
-                      <option value="mundra">Mundra, Gujarat</option>
-                      <option value="chennai">Chennai</option>
-                      <option value="kolkata">Kolkata</option>
-                      <option value="vizag">Visakhapatnam (Vizag)</option>
-                      <option value="pipavav">Pipavav, Gujarat</option>
+                      <optgroup label="India">
+                        <option value="nhava-sheva">Nhava Sheva (JNPT), Mumbai</option>
+                        <option value="mundra">Mundra, Gujarat</option>
+                        <option value="chennai">Chennai</option>
+                        <option value="kolkata">Kolkata</option>
+                        <option value="vizag">Visakhapatnam (Vizag)</option>
+                        <option value="pipavav">Pipavav, Gujarat</option>
+                      </optgroup>
                       <option value="other">Other — specify in message</option>
                     </select>
                   </div>
@@ -346,11 +364,11 @@ export default function ContactForm() {
 
                 <div className="flex gap-3">
                   <button type="button" onClick={() => setStep(0)}
-                    className="flex-1 border-2 border-gray-200 text-[#6B7280] font-bold py-4 rounded-xl text-sm hover:border-gray-300 transition-all cursor-pointer">
+                    className="flex-1 border-2 border-gray-200 text-[#6C7A73] font-bold py-4 rounded-xl text-sm hover:border-gray-300 transition-all cursor-pointer">
                     ← Back
                   </button>
                   <button type="button" disabled={!isStep1Valid} onClick={() => setStep(2)}
-                    className="flex-[3] bg-[#E8820C] hover:bg-[#C96B00] disabled:opacity-40 disabled:cursor-not-allowed text-white font-bold py-4 rounded-xl text-base transition-all duration-200 shadow-lg shadow-[#E8820C]/25 hover:-translate-y-0.5 cursor-pointer">
+                    className="flex-[3] btn btn-gold py-4 rounded-xl text-base disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer">
                     Next: Your Requirements →
                   </button>
                 </div>
@@ -368,27 +386,27 @@ export default function ContactForm() {
                 </div>
 
                 {/* Summary card */}
-                <div className="bg-[#F1F8E9] rounded-2xl p-5 border border-[#2E7D32]/15">
-                  <p className="text-xs font-bold tracking-widest uppercase text-[#2E7D32] mb-3">Your Request Summary</p>
+                <div className="bg-[#F2F9F5] rounded-2xl p-5 border border-[#217344]/15">
+                  <p className="text-xs font-bold tracking-widest uppercase text-[#217344] mb-3">Your Request Summary</p>
                   <div className="grid grid-cols-2 gap-x-6 gap-y-2 text-sm">
-                    <div><span className="text-[#6B7280]">Name: </span><span className="font-semibold text-[#1A2E1A]">{form.fullName}</span></div>
-                    {form.company && <div><span className="text-[#6B7280]">Company: </span><span className="font-semibold text-[#1A2E1A]">{form.company}</span></div>}
-                    <div><span className="text-[#6B7280]">Email: </span><span className="font-semibold text-[#1A2E1A]">{form.email}</span></div>
-                    <div><span className="text-[#6B7280]">Phone: </span><span className="font-semibold text-[#1A2E1A]">{form.phone}</span></div>
-                    {form.grade && <div><span className="text-[#6B7280]">Grade: </span><span className="font-semibold text-[#1A2E1A]">{gradeLabel(form.grade)}</span></div>}
-                    {form.quantity && <div><span className="text-[#6B7280]">Volume: </span><span className="font-semibold text-[#1A2E1A]">{form.quantity}</span></div>}
-                    {form.port && <div><span className="text-[#6B7280]">Port: </span><span className="font-semibold text-[#1A2E1A]">{form.port}</span></div>}
-                    {form.timeline && <div><span className="text-[#6B7280]">Timeline: </span><span className="font-semibold text-[#1A2E1A]">{form.timeline}</span></div>}
+                    <div><span className="text-[#6C7A73]">Name: </span><span className="font-semibold text-[#16281F]">{form.fullName}</span></div>
+                    {form.company && <div><span className="text-[#6C7A73]">Company: </span><span className="font-semibold text-[#16281F]">{form.company}</span></div>}
+                    <div><span className="text-[#6C7A73]">Email: </span><span className="font-semibold text-[#16281F]">{form.email}</span></div>
+                    <div><span className="text-[#6C7A73]">Phone: </span><span className="font-semibold text-[#16281F]">{form.phone}</span></div>
+                    {form.grade && <div><span className="text-[#6C7A73]">Grade: </span><span className="font-semibold text-[#16281F]">{gradeLabel(form.grade)}</span></div>}
+                    {form.quantity && <div><span className="text-[#6C7A73]">Volume: </span><span className="font-semibold text-[#16281F]">{form.quantity}</span></div>}
+                    {form.port && <div><span className="text-[#6C7A73]">Port: </span><span className="font-semibold text-[#16281F]">{form.port}</span></div>}
+                    {form.timeline && <div><span className="text-[#6C7A73]">Timeline: </span><span className="font-semibold text-[#16281F]">{form.timeline}</span></div>}
                   </div>
                 </div>
 
                 <div className="flex gap-3">
                   <button type="button" onClick={() => setStep(1)}
-                    className="flex-1 border-2 border-gray-200 text-[#6B7280] font-bold py-4 rounded-xl text-sm hover:border-gray-300 transition-all cursor-pointer">
+                    className="flex-1 border-2 border-gray-200 text-[#6C7A73] font-bold py-4 rounded-xl text-sm hover:border-gray-300 transition-all cursor-pointer">
                     ← Back
                   </button>
                   <button type="submit" disabled={loading}
-                    className="flex-[3] bg-[#E8820C] hover:bg-[#C96B00] disabled:opacity-70 disabled:cursor-not-allowed text-white font-bold py-4 rounded-xl text-base transition-all duration-200 shadow-lg shadow-[#E8820C]/25 hover:shadow-xl hover:-translate-y-0.5 flex items-center justify-center gap-2 cursor-pointer">
+                    className="flex-[3] btn btn-gold py-4 rounded-xl text-base disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer">
                     {loading ? (
                       <>
                         <svg className="animate-spin h-4 w-4" viewBox="0 0 24 24">
@@ -401,8 +419,9 @@ export default function ContactForm() {
                   </button>
                 </div>
 
-                <p className="text-xs text-[#6B7280] text-center">
-                  🔒 Your information is confidential and will never be shared with third parties.
+                <p className="text-xs text-[#6C7A73] text-center flex items-center justify-center gap-1.5">
+                  <LockIcon size={13} />
+                  Your information is confidential and will never be shared with third parties.
                 </p>
               </>
             )}

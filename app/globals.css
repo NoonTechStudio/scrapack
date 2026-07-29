@@ -1,24 +1,42 @@
-/* REVIEW VERSION — Logo6 Theme */
-/* Original theme backup: git stash or revert to previous commit if needed */
+/* ScraPack Solutions — brand theme */
+/* Palette sampled directly from the logo:
+   globe/wordmark green  #217344
+   "Pack" slate          #274C56
+   kraft carton light    #E8BA74
+   kraft carton shadow   #CC9F5F                       */
 
 @import "tailwindcss";
 
 @theme {
-  --color-forest: #1A2E1A;
-  --color-forest-light: #2D5A3D;
-  --color-accent: #E8820C;
-  --color-accent-light: #E8820C;
-  --color-paper: #FDFAF4;
+  /* ── Green (primary) ── */
+  --color-brand-green: #217344;
+  --color-brand-green-dark: #175434;
+  --color-brand-green-deep: #0E3A24;
+  --color-brand-green-mid: #3E9163;
+  --color-brand-green-pale: #9FD6B7;
+  --color-brand-green-soft: #E6F2EA;
+  --color-brand-green-softer: #F2F9F5;
 
-  --color-brand-green: #2E7D32;
-  --color-brand-green-dark: #1B5E20;
-  --color-brand-green-light: #E8F5E9;
-  --color-brand-orange: #E8820C;
-  --color-brand-orange-dark: #C96B00;
-  --color-brand-orange-light: #FFF3E0;
-  --color-brand-kraft: #8B6914;
-  --color-brand-beige: #F5E6C8;
-  --color-brand-beige-light: #FDFAF4;
+  /* ── Slate (secondary structure) ── */
+  --color-brand-slate: #274C56;
+  --color-brand-slate-dark: #18333B;
+  --color-brand-slate-deep: #10252B;
+  --color-brand-slate-mid: #4A727E;
+  --color-brand-slate-soft: #EAF1F3;
+
+  /* ── Kraft gold (accent) ── */
+  --color-brand-kraft: #E8BA74;
+  --color-brand-kraft-dark: #CC9F5F;
+  --color-brand-kraft-deep: #A87C33;
+  --color-brand-kraft-ink: #8A6224;
+  --color-brand-kraft-soft: #FAF0DF;
+  --color-brand-kraft-softer: #FDF8F0;
+
+  /* ── Neutrals ── */
+  --color-brand-cream: #FBF8F2;
+  --color-brand-ink: #16281F;
+  --color-brand-body: #46554E;
+  --color-brand-muted: #6C7A73;
 
   --animate-float-a: floatA 3.5s ease-in-out infinite;
   --animate-float-b: floatB 4.2s ease-in-out 1.5s infinite;
@@ -26,16 +44,31 @@
 }
 
 :root {
-  --primary: #2E7D32;
-  --primary-dark: #1B5E20;
-  --primary-light: #E8F5E9;
-  --accent: #E8820C;
-  --accent-dark: #C96B00;
-  --accent-light: #FFF3E0;
-  --kraft: #8B6914;
-  --beige: #F5E6C8;
-  --beige-light: #FDFAF4;
-  --dark-text: #1A2E1A;
+  --green: #217344;
+  --green-dark: #175434;
+  --green-deep: #0E3A24;
+  --green-soft: #E6F2EA;
+  --green-softer: #F2F9F5;
+
+  --slate: #274C56;
+  --slate-dark: #18333B;
+  --slate-soft: #EAF1F3;
+
+  --kraft: #E8BA74;
+  --kraft-dark: #CC9F5F;
+  --kraft-ink: #8A6224;
+  --kraft-soft: #FAF0DF;
+
+  --cream: #FBF8F2;
+  --ink: #16281F;
+  --body: #46554E;
+  --muted: #6C7A73;
+
+  /* Elevation — warm-tinted so shadows sit on the cream ground */
+  --shadow-sm: 0 1px 2px rgba(22, 40, 31, 0.05);
+  --shadow-md: 0 4px 16px rgba(22, 40, 31, 0.07);
+  --shadow-lg: 0 12px 32px rgba(22, 40, 31, 0.09);
+  --shadow-xl: 0 24px 60px rgba(22, 40, 31, 0.12);
 }
 
 @keyframes floatA {
@@ -57,22 +90,203 @@ html {
 
 body {
   font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
-  background-color: #FDFAF4;
-  color: #374151;
+  background-color: var(--cream);
+  color: var(--body);
+  -webkit-font-smoothing: antialiased;
+  /* Decorative absolutely-positioned cards sit just outside their containers;
+     this stops them producing a horizontal scrollbar at in-between widths. */
+  overflow-x: hidden;
 }
 
-/* Scroll reveal */
+::selection {
+  background-color: var(--kraft);
+  color: var(--ink);
+}
+
+/* ── Typography helpers ── */
+.eyebrow {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--kraft-ink);
+}
+.eyebrow-on-dark {
+  color: var(--kraft);
+}
+
+/* Small kraft rule that sits under section eyebrows */
+.eyebrow-rule {
+  display: inline-block;
+  width: 2rem;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--kraft), rgba(232, 186, 116, 0));
+}
+
+/* Hand-drawn underline used on hero words */
+.brush-underline {
+  position: relative;
+  display: inline-block;
+}
+
+/* ── Buttons ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  line-height: 1;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease,
+    color 0.2s ease, border-color 0.2s ease;
+  white-space: nowrap;
+}
+.btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Primary — kraft gold pill with deep ink text (the carton colour from the logo) */
+.btn-gold {
+  background-color: var(--kraft);
+  color: var(--ink);
+  box-shadow: 0 8px 22px rgba(204, 159, 95, 0.35);
+}
+.btn-gold:hover {
+  background-color: var(--kraft-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(204, 159, 95, 0.42);
+}
+
+/* Secondary — solid brand green */
+.btn-green {
+  background-color: var(--green);
+  color: #fff;
+  box-shadow: 0 8px 22px rgba(33, 115, 68, 0.22);
+}
+.btn-green:hover {
+  background-color: var(--green-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(33, 115, 68, 0.3);
+}
+
+/* Tertiary — slate, used where green would collide with a green ground */
+.btn-slate {
+  background-color: var(--slate);
+  color: #fff;
+  box-shadow: 0 8px 22px rgba(39, 76, 86, 0.22);
+}
+.btn-slate:hover {
+  background-color: var(--slate-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(39, 76, 86, 0.3);
+}
+
+/* Outline on light grounds */
+.btn-outline {
+  border: 2px solid var(--green);
+  color: var(--green);
+  background-color: transparent;
+}
+.btn-outline:hover {
+  background-color: var(--green);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Outline on dark grounds */
+.btn-outline-light {
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  color: #fff;
+  background-color: transparent;
+}
+.btn-outline-light:hover {
+  background-color: #fff;
+  color: var(--green-deep);
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+
+.btn-sm { padding: 0.7rem 1.4rem; font-size: 0.875rem; }
+.btn-md { padding: 0.9rem 1.9rem; font-size: 0.9375rem; }
+.btn-lg { padding: 1.05rem 2.25rem; font-size: 1.0625rem; }
+
+/* ── Surfaces ── */
+.card-soft {
+  background-color: #fff;
+  border: 1px solid rgba(39, 76, 86, 0.09);
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.card-soft:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(204, 159, 95, 0.4);
+}
+
+/* Icon tile used in feature grids — replaces the old emoji blocks */
+.icon-tile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  flex-shrink: 0;
+}
+.icon-tile-green {
+  background-color: var(--green-soft);
+  color: var(--green);
+}
+.icon-tile-kraft {
+  background-color: var(--kraft-soft);
+  color: var(--kraft-ink);
+}
+.icon-tile-slate {
+  background-color: var(--slate-soft);
+  color: var(--slate);
+}
+.icon-tile-onDark {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--kraft);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Subtle paper grain overlay for the big cream bands */
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  background-image: radial-gradient(rgba(39, 76, 86, 0.055) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* ── Scroll reveal ── */
 .reveal {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
 }
-.reveal-delay-1 { transition-delay: 0.1s; }
-.reveal-delay-2 { transition-delay: 0.2s; }
-.reveal-delay-3 { transition-delay: 0.3s; }
-.reveal-delay-4 { transition-delay: 0.4s; }
-.reveal-delay-5 { transition-delay: 0.5s; }
+.reveal-delay-1 { transition-delay: 0.08s; }
+.reveal-delay-2 { transition-delay: 0.16s; }
+.reveal-delay-3 { transition-delay: 0.24s; }
+.reveal-delay-4 { transition-delay: 0.32s; }
+.reveal-delay-5 { transition-delay: 0.4s; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .btn:hover { transform: none; }
+  .card-soft:hover { transform: none; }
+}

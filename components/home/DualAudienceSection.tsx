@@ -1,22 +1,19 @@
-// REVIEW VERSION — Logo6 Theme
-// Original theme backup: git stash or
-// revert to previous commit if needed
-
 "use client";
 
 import { useRef, useEffect } from "react";
+import { FactoryIcon, RecycleIcon } from "@/components/icons";
 
 function CheckGreen({ text }: { text: string }) {
   return (
-    <li className="flex items-center gap-3 text-sm" style={{ color: "#374151" }}>
+    <li className="flex items-center gap-3 text-sm" style={{ color: "#46554E" }}>
       <span
         className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center"
-        style={{ backgroundColor: "#E8F5E9" }}
+        style={{ backgroundColor: "#E6F2EA" }}
       >
         <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
           <path
             d="M2 5.5L4 7.5L8 3"
-            stroke="#2E7D32"
+            stroke="#217344"
             strokeWidth="1.5"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -28,18 +25,18 @@ function CheckGreen({ text }: { text: string }) {
   );
 }
 
-function CheckOrange({ text }: { text: string }) {
+function CheckKraft({ text }: { text: string }) {
   return (
-    <li className="flex items-center gap-3 text-sm" style={{ color: "#374151" }}>
+    <li className="flex items-center gap-3 text-sm" style={{ color: "#46554E" }}>
       <span
         className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center"
-        style={{ backgroundColor: "#FFF3E0" }}
+        style={{ backgroundColor: "#FAF0DF" }}
       >
         <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
           <path
             d="M2 5.5L4 7.5L8 3"
-            stroke="#E8820C"
-            strokeWidth="1.5"
+            stroke="#8A6224"
+            strokeWidth="1.8"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
@@ -74,17 +71,17 @@ export default function DualAudienceSection() {
         <div className="text-center mb-14 reveal">
           <p
             className="text-xs font-bold tracking-widest uppercase mb-3"
-            style={{ color: "#E8820C" }}
+            style={{ color: "#8A6224" }}
           >
             Who We Serve
           </p>
           <h2
             className="text-4xl sm:text-5xl font-bold mb-4"
-            style={{ color: "#1A2E1A" }}
+            style={{ color: "#16281F" }}
           >
             Built for Both Sides of the Trade
           </h2>
-          <p className="text-lg max-w-xl mx-auto" style={{ color: "#6B7280" }}>
+          <p className="text-lg max-w-xl mx-auto" style={{ color: "#6C7A73" }}>
             US suppliers and Indian buyers both find exactly what they need
             with ScraPack.
           </p>
@@ -95,21 +92,18 @@ export default function DualAudienceSection() {
           {/* US Suppliers */}
           <div
             className="reveal reveal-delay-1 rounded-3xl p-6 lg:p-10 border-l-4"
-            style={{ backgroundColor: "#F1F8E9", borderColor: "#2E7D32" }}
+            style={{ backgroundColor: "#F2F9F5", borderColor: "#217344" }}
           >
-            <div
-              className="inline-flex items-center justify-center w-16 h-16 rounded-2xl text-4xl"
-              style={{ backgroundColor: "rgba(46,125,50,0.10)" }}
-            >
-              ♻️
+            <div className="icon-tile icon-tile-green w-16 h-16">
+              <RecycleIcon size={30} />
             </div>
             <h3
               className="text-2xl font-bold mt-6 mb-3"
-              style={{ color: "#1B5E20" }}
+              style={{ color: "#175434" }}
             >
               US OCC Recyclers &amp; Exporters
             </h3>
-            <p className="leading-relaxed mb-6" style={{ color: "#4A5568" }}>
+            <p className="leading-relaxed mb-6" style={{ color: "#46554E" }}>
               We&apos;re your consistent, reliable buyer. ScraPack purchases OCC
               Grade 11 and 12 at competitive rates with prompt payment — so you
               can focus on collection.
@@ -119,13 +113,7 @@ export default function DualAudienceSection() {
               <CheckGreen text="Consistent volume purchases" />
               <CheckGreen text="Reliable, on-time payments" />
             </ul>
-            <a
-              href="/contact"
-              className="inline-flex items-center px-6 py-3 rounded-full font-semibold text-sm text-white transition-all duration-200 hover:scale-105"
-              style={{ backgroundColor: "#1B5E20" }}
-              onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#2E7D32")}
-              onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#1B5E20")}
-            >
+            <a href="/contact" className="btn btn-green btn-sm">
               Become a Supplier →
             </a>
           </div>
@@ -133,37 +121,28 @@ export default function DualAudienceSection() {
           {/* Indian Buyers */}
           <div
             className="reveal reveal-delay-2 rounded-3xl p-6 lg:p-10 border-l-4"
-            style={{ backgroundColor: "#FFF3E0", borderColor: "#E8820C" }}
+            style={{ backgroundColor: "#FAF0DF", borderColor: "#E8BA74" }}
           >
-            <div
-              className="inline-flex items-center justify-center w-16 h-16 rounded-2xl text-4xl"
-              style={{ backgroundColor: "rgba(232,130,12,0.10)" }}
-            >
-              🏭
+            <div className="icon-tile icon-tile-kraft w-16 h-16 bg-white/70">
+              <FactoryIcon size={30} />
             </div>
             <h3
               className="text-2xl font-bold mt-6 mb-3"
-              style={{ color: "#7C2D12" }}
+              style={{ color: "#6B4A15" }}
             >
               Indian Paper Mills &amp; Traders
             </h3>
-            <p className="leading-relaxed mb-6" style={{ color: "#4A5568" }}>
+            <p className="leading-relaxed mb-6" style={{ color: "#46554E" }}>
               Source premium OCC directly from the USA. Verified grades, full
               export documentation, and flexible shipping schedules to all major
               Indian ports.
             </p>
             <ul className="space-y-3 mb-8">
-              <CheckOrange text="OCC Grade 11 & 12 certified" />
-              <CheckOrange text="Full export documentation" />
-              <CheckOrange text="Flexible port scheduling" />
+              <CheckKraft text="OCC Grade 11 & 12 certified" />
+              <CheckKraft text="Full export documentation" />
+              <CheckKraft text="Flexible port scheduling" />
             </ul>
-            <a
-              href="/contact"
-              className="inline-flex items-center px-6 py-3 rounded-full font-semibold text-sm text-white transition-all duration-200 hover:scale-105"
-              style={{ backgroundColor: "#E8820C" }}
-              onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#C96B00")}
-              onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#E8820C")}
-            >
+            <a href="/contact" className="btn btn-slate btn-sm">
               Inquire as Buyer →
             </a>
           </div>

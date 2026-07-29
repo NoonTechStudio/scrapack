@@ -1,10 +1,7 @@
-// REVIEW VERSION — Logo6 Theme
-// Original theme backup: git stash or
-// revert to previous commit if needed
-
 "use client";
 
 import { useRef, useEffect } from "react";
+import { MailIcon, MapPinIcon } from "@/components/icons";
 
 export default function CTASection() {
   const ref = useRef<HTMLElement>(null);
@@ -28,55 +25,37 @@ export default function CTASection() {
       ref={ref}
       className="py-32 px-6 lg:px-12"
       style={{
-        background: "linear-gradient(135deg, #FFF8F0, #F1F8E9)",
+        background: "linear-gradient(135deg, #FDF8F0, #F2F9F5)",
       }}
     >
       <div className="max-w-3xl mx-auto text-center">
-        <p
-          className="text-xs font-bold tracking-widest uppercase mb-4 reveal"
-          style={{ color: "#E8820C" }}
-        >
-          Let&apos;s Trade
-        </p>
+        <p className="eyebrow mb-4 reveal">Let&apos;s Trade</p>
 
         <h2
           className="text-3xl sm:text-5xl lg:text-6xl font-black leading-tight mb-6 reveal reveal-delay-1"
-          style={{ color: "#1A2E1A" }}
+          style={{ color: "#16281F" }}
         >
-          Ready to Trade OCC?
+          Ready to Trade?
         </h2>
 
         <p
           className="text-xl leading-relaxed mb-10 reveal reveal-delay-2"
-          style={{ color: "#4A5568" }}
+          style={{ color: "#46554E" }}
         >
-          Whether you have OCC to sell or need OCC to buy — ScraPack is your
-          partner from Philadelphia to India.
+          Whether you have OCC or scrap tires to sell, or need export-grade
+          material to buy — ScraPack is your partner from the U.S. to your port.
         </p>
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 mb-12 reveal reveal-delay-3">
-          <a
-            href="/contact"
-            className="inline-flex items-center justify-center px-10 py-5 rounded-full font-bold text-lg text-white transition-all duration-200 hover:scale-105 active:scale-95 hover:bg-[#C96B00] w-full sm:w-auto"
-            style={{
-              backgroundColor: "#E8820C",
-              boxShadow: "0 12px 32px rgba(232,130,12,0.30)",
-            }}
-          >
+          <a href="/contact" className="btn btn-gold btn-lg w-full sm:w-auto">
             Request a Quote
           </a>
           <a
             href="https://wa.me/12019142222"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2.5 px-10 py-5 rounded-full font-bold text-lg text-white transition-all duration-200 hover:scale-105 active:scale-95 w-full sm:w-auto"
-            style={{
-              backgroundColor: "#1B5E20",
-              boxShadow: "0 12px 32px rgba(27,94,32,0.20)",
-            }}
-            onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#2E7D32")}
-            onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#1B5E20")}
+            className="btn btn-green btn-lg w-full sm:w-auto"
           >
             <svg
               width="20"
@@ -94,14 +73,22 @@ export default function CTASection() {
         {/* Contact details */}
         <div
           className="flex flex-wrap justify-center gap-6 sm:gap-12 text-sm reveal reveal-delay-4"
-          style={{ color: "#4A5568" }}
+          style={{ color: "#46554E" }}
         >
-          <span><span style={{ color: "#E8820C" }}>📍</span> 9830 Walley Ave, Philadelphia, PA 19115</span>
+          <span className="flex items-center gap-2">
+            <span style={{ color: "#8A6224" }}>
+              <MapPinIcon size={16} />
+            </span>
+            9830 Walley Ave, Philadelphia, PA 19115
+          </span>
           <a
             href="mailto:info@scrapacksolutions.com"
-            className="hover:text-gray-600 transition-colors"
+            className="flex items-center gap-2 transition-colors hover:text-[#217344]"
           >
-            <span style={{ color: "#E8820C" }}>✉️</span> info@scrapacksolutions.com
+            <span style={{ color: "#8A6224" }}>
+              <MailIcon size={16} />
+            </span>
+            info@scrapacksolutions.com
           </a>
         </div>
       </div>

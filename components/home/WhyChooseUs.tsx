@@ -1,35 +1,37 @@
-// REVIEW VERSION — Logo6 Theme
-// Original theme backup: git stash or
-// revert to previous commit if needed
-
 "use client";
 
 import { useRef, useEffect } from "react";
+import {
+  HandshakeIcon,
+  InspectIcon,
+  MapPinIcon,
+  ShipIcon,
+} from "@/components/icons";
 
 const FEATURES = [
   {
-    icon: "📍",
+    Icon: MapPinIcon,
     title: "Philadelphia, PA",
     description:
       "Strategically based in one of the USA's top OCC export corridors, with direct access to East Coast shipping ports.",
   },
   {
-    icon: "🔍",
+    Icon: InspectIcon,
     title: "Grade Verified",
     description:
       "Every shipment is inspected to OCC 11 and OCC 12 standards. What you order is exactly what arrives at your port.",
   },
   {
-    icon: "🚢",
-    title: "Export to India",
+    Icon: ShipIcon,
+    title: "Global Export Reach",
     description:
-      "We know the India trade route. Full documentation — packing list, B/L, certificate of origin — handled seamlessly.",
+      "We know the trade routes. Full documentation — packing list, B/L, certificate of origin — handled seamlessly.",
   },
   {
-    icon: "🤝",
+    Icon: HandshakeIcon,
     title: "Relationship First",
     description:
-      "We're not a marketplace. We build long-term supply relationships with both our US partners and Indian buyers.",
+      "We're not a marketplace. We build long-term supply relationships with both our US partners and overseas buyers.",
   },
 ];
 
@@ -53,58 +55,43 @@ export default function WhyChooseUs() {
   return (
     <section
       ref={ref}
-      className="py-24 px-6 lg:px-12"
-      style={{ backgroundColor: "#1B5E20" }}
+      className="relative overflow-hidden py-24 px-6 lg:px-12"
+      style={{
+        background:
+          "linear-gradient(135deg, #175434 0%, #0E3A24 52%, #10252B 100%)",
+      }}
     >
-      <div className="max-w-7xl mx-auto">
+      {/* Warm glow so the dark band has depth */}
+      <div
+        className="pointer-events-none absolute -top-24 right-[-10%] w-[560px] h-[560px] rounded-full"
+        style={{ background: "radial-gradient(circle, rgba(232,186,116,0.14) 0%, transparent 68%)" }}
+      />
+
+      <div className="relative max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-14 reveal">
-          <p
-            className="text-xs font-bold tracking-widest uppercase mb-3"
-            style={{ color: "#E8820C" }}
-          >
-            Our Advantage
-          </p>
+          <p className="eyebrow eyebrow-on-dark mb-3">Our Advantage</p>
           <h2 className="text-4xl sm:text-5xl font-black text-white mb-4">
             Why ScraPack?
           </h2>
-          <p className="text-lg max-w-xl mx-auto" style={{ color: "#A5D6A7" }}>
-            What makes us the preferred OCC export partner.
+          <p className="text-lg max-w-xl mx-auto" style={{ color: "#9FD6B7" }}>
+            What makes us the preferred recovered-material export partner.
           </p>
         </div>
 
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {FEATURES.map((feat, i) => (
+          {FEATURES.map(({ Icon, title, description }, i) => (
             <div
-              key={feat.title}
-              className={`reveal reveal-delay-${i + 1} rounded-3xl p-6 sm:p-8 border transition-all duration-300 cursor-default`}
-              style={{
-                backgroundColor: "rgba(255,255,255,0.05)",
-                borderColor: "rgba(255,255,255,0.10)",
-              }}
-              onMouseOver={(e) => {
-                const el = e.currentTarget as HTMLElement;
-                el.style.backgroundColor = "rgba(255,255,255,0.10)";
-                el.style.borderColor = "rgba(232,130,12,0.40)";
-              }}
-              onMouseOut={(e) => {
-                const el = e.currentTarget as HTMLElement;
-                el.style.backgroundColor = "rgba(255,255,255,0.05)";
-                el.style.borderColor = "rgba(255,255,255,0.10)";
-              }}
+              key={title}
+              className={`reveal reveal-delay-${i + 1} group rounded-3xl p-6 sm:p-8 border border-white/10 bg-white/[0.05] transition-all duration-300 hover:bg-white/[0.09] hover:border-[#E8BA74]/45 hover:-translate-y-1`}
             >
-              <div
-                className="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-6"
-                style={{ backgroundColor: "rgba(255,255,255,0.10)" }}
-              >
-                {feat.icon}
+              <div className="icon-tile icon-tile-onDark w-14 h-14 mb-6 transition-colors duration-300 group-hover:bg-[#E8BA74] group-hover:text-[#16281F]">
+                <Icon size={26} />
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">
-                {feat.title}
-              </h3>
-              <p className="text-base leading-relaxed" style={{ color: "#C8E6C9" }}>
-                {feat.description}
+              <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
+              <p className="text-base leading-relaxed" style={{ color: "#C6E7D3" }}>
+                {description}
               </p>
             </div>
           ))}

@@ -3,14 +3,15 @@ import GalleryGrid from '@/components/gallery/GalleryGrid'
 
 export const metadata: Metadata = {
   title: 'Gallery | ScraPack Solutions LLC',
-  description: 'Browse our gallery of OCC bales, recycled cardboard, and export operations — ScraPack Solutions LLC.',
+  description: 'Browse our gallery of OCC bales, baled scrap tires, container loading and export operations — ScraPack Solutions LLC.',
+  keywords: 'OCC bales photos, baled scrap tires, scrap tire bales container loading, OCC export gallery, tire recycling material USA',
 }
 
 export default function GalleryPage() {
   return (
-    <div className="min-h-screen bg-[#FDFAF4]">
+    <div className="min-h-screen bg-[#FBF8F2]">
       {/* ── Hero ── */}
-      <div className="relative overflow-hidden bg-[#FDFAF4] pt-36 md:pt-44 pb-20 px-6">
+      <div className="relative overflow-hidden bg-[#FBF8F2] pt-36 md:pt-44 pb-20 px-6">
 
         {/* SVG line-art background — OCC bales & cardboard motifs */}
         <svg
@@ -20,7 +21,7 @@ export default function GalleryPage() {
           preserveAspectRatio="xMidYMid slice"
         >
           {/* ── Far-left large bale stack ── */}
-          <g transform="translate(-40, 120)" stroke="#1A2E1A" strokeWidth="1.2" fill="none" opacity="0.07">
+          <g transform="translate(-40, 120)" stroke="#16281F" strokeWidth="1.2" fill="none" opacity="0.07">
             <rect x="0" y="60" width="110" height="80" rx="6"/>
             <rect x="8" y="68" width="94" height="64" rx="4"/>
             <line x1="0" y1="100" x2="110" y2="100"/>
@@ -39,7 +40,7 @@ export default function GalleryPage() {
           </g>
 
           {/* ── Center-left floating single bale ── */}
-          <g transform="translate(180, 30)" stroke="#E8820C" strokeWidth="1.1" fill="none" opacity="0.09">
+          <g transform="translate(180, 30)" stroke="#E8BA74" strokeWidth="1.1" fill="none" opacity="0.09">
             <rect x="0" y="0" width="90" height="65" rx="5"/>
             <rect x="6" y="6" width="78" height="53" rx="3"/>
             <line x1="0" y1="32" x2="90" y2="32"/>
@@ -50,7 +51,7 @@ export default function GalleryPage() {
           </g>
 
           {/* ── Top center — shipping container outline ── */}
-          <g transform="translate(420, 10)" stroke="#1A2E1A" strokeWidth="1.1" fill="none" opacity="0.055">
+          <g transform="translate(420, 10)" stroke="#16281F" strokeWidth="1.1" fill="none" opacity="0.055">
             <rect x="0" y="0" width="240" height="100" rx="4"/>
             <rect x="6" y="6" width="228" height="88" rx="2"/>
             {/* container ribs */}
@@ -68,7 +69,7 @@ export default function GalleryPage() {
           </g>
 
           {/* ── Right side bale tower ── */}
-          <g transform="translate(1100, 60)" stroke="#1A2E1A" strokeWidth="1.2" fill="none" opacity="0.065">
+          <g transform="translate(1100, 60)" stroke="#16281F" strokeWidth="1.2" fill="none" opacity="0.065">
             <rect x="0" y="120" width="100" height="72" rx="5"/>
             <line x1="0" y1="156" x2="100" y2="156"/>
             <line x1="33" y1="120" x2="33" y2="192"/>
@@ -88,7 +89,7 @@ export default function GalleryPage() {
           </g>
 
           {/* ── Far right accent bale ── */}
-          <g transform="translate(1260, 100)" stroke="#E8820C" strokeWidth="1.1" fill="none" opacity="0.08">
+          <g transform="translate(1260, 100)" stroke="#E8BA74" strokeWidth="1.1" fill="none" opacity="0.08">
             <rect x="0" y="0" width="80" height="58" rx="4"/>
             <rect x="5" y="5" width="70" height="48" rx="3"/>
             <line x1="0" y1="29" x2="80" y2="29"/>
@@ -99,7 +100,7 @@ export default function GalleryPage() {
           </g>
 
           {/* ── Bottom-left scattered cardboard sheets ── */}
-          <g transform="translate(60, 210)" stroke="#8B6914" strokeWidth="1" fill="none" opacity="0.06">
+          <g transform="translate(60, 210)" stroke="#8A6224" strokeWidth="1" fill="none" opacity="0.06">
             <rect x="0" y="0" width="70" height="12" rx="2"/>
             <rect x="5" y="16" width="80" height="12" rx="2"/>
             <rect x="2" y="32" width="65" height="12" rx="2"/>
@@ -108,12 +109,12 @@ export default function GalleryPage() {
 
           {/* ── Dotted grid / graph paper feel ── */}
           <pattern id="dots" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
-            <circle cx="2" cy="2" r="1.2" fill="#1A2E1A" opacity="0.25"/>
+            <circle cx="2" cy="2" r="1.2" fill="#16281F" opacity="0.25"/>
           </pattern>
           <rect x="0" y="0" width="100%" height="100%" fill="url(#dots)" opacity="0.18"/>
 
           {/* ── Subtle arc / recycling motif top-right ── */}
-          <g transform="translate(900, -30)" stroke="#E8820C" strokeWidth="1.3" fill="none" opacity="0.07">
+          <g transform="translate(900, -30)" stroke="#E8BA74" strokeWidth="1.3" fill="none" opacity="0.07">
             <path d="M 0 120 A 90 90 0 0 1 180 120"/>
             <path d="M 20 120 A 70 70 0 0 1 160 120"/>
             <path d="M 40 120 A 50 50 0 0 1 140 120"/>
@@ -125,21 +126,21 @@ export default function GalleryPage() {
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
-            background: 'radial-gradient(ellipse 70% 60% at 50% 40%, rgba(232,130,12,0.06) 0%, transparent 70%)',
+            background: 'radial-gradient(ellipse 70% 60% at 50% 40%, rgba(204,159,95,0.06) 0%, transparent 70%)',
           }}
         />
 
         {/* Content */}
         <div className="relative max-w-4xl mx-auto text-center">
           {/* Pill badge */}
-          <div className="inline-flex items-center gap-2 bg-[#1A2E1A]/8 border border-[#1A2E1A]/12 rounded-full px-5 py-2 mb-8">
-            <span className="block w-2 h-2 rounded-full bg-[#E8820C]" />
-            <span className="text-[#1A2E1A] text-xs font-bold tracking-widest uppercase">
+          <div className="inline-flex items-center gap-2 bg-[#16281F]/8 border border-[#16281F]/12 rounded-full px-5 py-2 mb-8">
+            <span className="block w-2 h-2 rounded-full bg-[#CC9F5F]" />
+            <span className="text-[#16281F] text-xs font-bold tracking-widest uppercase">
               Our Operations
             </span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold text-[#1A2E1A] mb-6 leading-[1.05] tracking-tight">
+          <h1 className="text-5xl md:text-7xl font-bold text-[#16281F] mb-6 leading-[1.05] tracking-tight">
             Our{' '}
             <span className="relative inline-block">
               Gallery
@@ -154,7 +155,7 @@ export default function GalleryPage() {
               >
                 <path
                   d="M2 7 Q50 1 100 6 Q150 11 198 4"
-                  stroke="#E8820C"
+                  stroke="#E8BA74"
                   strokeWidth="3"
                   strokeLinecap="round"
                   fill="none"
@@ -163,23 +164,24 @@ export default function GalleryPage() {
             </span>
           </h1>
 
-          <p className="text-[#1A2E1A]/60 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mt-4">
-            A window into our world — OCC bales, loading operations, and the materials that power paper mills across India.
+          <p className="text-[#16281F]/60 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mt-4">
+            A window into our world — OCC bales, baled scrap tires, container
+            loading, and the materials that power mills and processors worldwide.
           </p>
 
           {/* Stat chips */}
           <div className="flex flex-wrap justify-center gap-4 mt-10">
             {[
-              { value: '20+', label: 'Photos' },
-              { value: 'OCC 11 & 12', label: 'Grade' },
-              { value: 'USA → India', label: 'Route' },
+              { value: '25+', label: 'Photos' },
+              { value: 'OCC & Tires', label: 'Materials' },
+              { value: 'USA → Worldwide', label: 'Route' },
             ].map((s) => (
               <div
                 key={s.label}
-                className="flex flex-col items-center bg-white border border-[#1A2E1A]/10 rounded-2xl px-6 py-3 shadow-sm"
+                className="flex flex-col items-center bg-white border border-[#16281F]/10 rounded-2xl px-6 py-3 shadow-sm"
               >
-                <span className="text-[#E8820C] font-bold text-lg leading-none">{s.value}</span>
-                <span className="text-[#1A2E1A]/50 text-xs font-medium mt-1 uppercase tracking-wider">{s.label}</span>
+                <span className="text-[#8A6224] font-bold text-lg leading-none">{s.value}</span>
+                <span className="text-[#16281F]/50 text-xs font-medium mt-1 uppercase tracking-wider">{s.label}</span>
               </div>
             ))}
           </div>
@@ -188,7 +190,7 @@ export default function GalleryPage() {
         {/* Bottom wave divider into gallery section */}
         <div className="absolute bottom-0 left-0 right-0 overflow-hidden leading-[0]">
           <svg viewBox="0 0 1440 40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full h-10">
-            <path d="M0 40 L0 20 Q360 0 720 20 Q1080 40 1440 20 L1440 40 Z" fill="#FDFAF4"/>
+            <path d="M0 40 L0 20 Q360 0 720 20 Q1080 40 1440 20 L1440 40 Z" fill="#FBF8F2"/>
           </svg>
         </div>
       </div>

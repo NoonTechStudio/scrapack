@@ -1,46 +1,46 @@
-// REVIEW VERSION — Logo6 Theme
-// Original theme backup: git stash or
-// revert to previous commit if needed
-
 "use client";
 
 import { useRef, useEffect } from "react";
+import { HandshakeIcon, InspectIcon, RecycleIcon } from "@/components/icons";
 
 const values = [
   {
-    icon: "🤝",
+    Icon: HandshakeIcon,
     title: "Reliability",
     text: "We do what we say. When we commit to a price, a grade, and a delivery schedule — we honor it. Our US suppliers and Indian buyers both know that ScraPack's word is our contract.",
     cardStyle: {
-      borderTop: "4px solid #2E7D32",
+      borderTop: "4px solid #217344",
       backgroundColor: "#ffffff",
     },
-    iconBg: "#E8F5E9",
-    titleColor: "#1A2E1A",
-    textColor: "#4A5568",
+    iconBg: "#E6F2EA",
+    iconColor: "#217344",
+    titleColor: "#16281F",
+    textColor: "#46554E",
   },
   {
-    icon: "🔍",
+    Icon: InspectIcon,
     title: "Transparency",
     text: "No hidden costs, no grade surprises. We provide full documentation — packing lists, certificates of origin, moisture reports — so both parties always know exactly what is being traded.",
     cardStyle: {
-      backgroundColor: "#1B5E20",
+      backgroundColor: "#175434",
     },
     iconBg: "rgba(255,255,255,0.1)",
+    iconColor: "#E8BA74",
     titleColor: "#ffffff",
-    textColor: "#C8E6C9",
+    textColor: "#C6E7D3",
   },
   {
-    icon: "♻️",
+    Icon: RecycleIcon,
     title: "Sustainability",
-    text: "OCC recycling is environmental work. Every tonne of corrugated we export from the US to Indian paper mills directly reduces virgin wood pulp consumption and extends the lifecycle of paper fiber globally.",
+    text: "Recycling is environmental work. Every tonne of corrugated and every container of scrap tires we export displaces virgin material and extends the lifecycle of resources globally.",
     cardStyle: {
-      borderTop: "4px solid #E8820C",
+      borderTop: "4px solid #CC9F5F",
       backgroundColor: "#ffffff",
     },
-    iconBg: "#FFF3E0",
-    titleColor: "#1A2E1A",
-    textColor: "#4A5568",
+    iconBg: "#FAF0DF",
+    iconColor: "#8A6224",
+    titleColor: "#16281F",
+    textColor: "#46554E",
   },
 ];
 
@@ -65,24 +65,19 @@ export default function MissionValues() {
     <section
       ref={ref}
       className="py-16 md:py-24 px-6 lg:px-12"
-      style={{ backgroundColor: "#F1F8E9" }}
+      style={{ backgroundColor: "#F2F9F5" }}
     >
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="text-center">
-          <p
-            className="text-xs font-bold tracking-widest uppercase mb-4 reveal"
-            style={{ color: "#E8820C" }}
-          >
-            WHAT DRIVES US
-          </p>
+          <p className="eyebrow mb-4 reveal">What Drives Us</p>
           <h2
             className="text-3xl md:text-4xl font-black reveal reveal-delay-1"
-            style={{ color: "#1A2E1A" }}
+            style={{ color: "#16281F" }}
           >
             Our Mission &amp; Core Values
           </h2>
-          <p className="text-lg mt-4 max-w-2xl mx-auto reveal reveal-delay-2" style={{ color: "#4A5568" }}>
+          <p className="text-lg mt-4 max-w-2xl mx-auto reveal reveal-delay-2" style={{ color: "#46554E" }}>
             Every decision we make at ScraPack is guided by three principles.
           </p>
         </div>
@@ -96,10 +91,10 @@ export default function MissionValues() {
               style={v.cardStyle}
             >
               <div
-                className="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl"
-                style={{ backgroundColor: v.iconBg }}
+                className="icon-tile w-16 h-16"
+                style={{ backgroundColor: v.iconBg, color: v.iconColor }}
               >
-                {v.icon}
+                <v.Icon size={30} />
               </div>
               <h3
                 className="text-2xl font-black mt-6"

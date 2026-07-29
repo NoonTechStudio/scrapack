@@ -1,7 +1,3 @@
-// REVIEW VERSION — Logo6 Theme
-// Original theme backup: git stash or
-// revert to previous commit if needed
-
 "use client";
 
 import { usePathname } from "next/navigation";
@@ -72,9 +68,9 @@ export default function MobileBottomNav() {
       className="fixed bottom-0 left-0 right-0 z-50 md:hidden"
       style={{
         backgroundColor: "white",
-        borderTop: "2px solid #E8F5E9",
+        borderTop: "2px solid #E6F2EA",
         paddingBottom: "env(safe-area-inset-bottom)",
-        boxShadow: "0 -4px 24px rgba(46,125,50,0.08)",
+        boxShadow: "0 -4px 24px rgba(33,115,68,0.08)",
       }}
     >
       <div
@@ -91,20 +87,20 @@ export default function MobileBottomNav() {
               className="flex flex-col items-center justify-center gap-1 flex-1 relative"
             >
               {isActive && (
-                <div className="absolute -top-0.5 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-[#E8820C]" />
+                <div className="absolute -top-0.5 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-[#CC9F5F]" />
               )}
               <div
                 className={`rounded-xl transition-all duration-200 ${
-                  isActive ? "bg-[#1B5E20] p-2" : "p-1"
+                  isActive ? "bg-[#175434] p-2" : "p-1"
                 }`}
-                style={{ color: isActive ? "white" : "#9CA3AF" }}
+                style={{ color: isActive ? "white" : "#8B978F" }}
               >
                 {icon}
               </div>
               <span
                 className={`text-[10px] transition-all duration-200 ${
                   isActive
-                    ? "font-semibold text-[#1B5E20]"
+                    ? "font-semibold text-[#175434]"
                     : "font-medium text-gray-400"
                 }`}
               >

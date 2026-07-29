@@ -4,6 +4,11 @@ import { useState, useCallback } from 'react'
 import Image from 'next/image'
 
 const images = [
+  { src: '/images/t1.jpeg', alt: 'High-density baled scrap tires stacked in the yard, ready for export' },
+  { src: '/images/t5.jpeg', alt: 'Steel-wire tied scrap tire bales awaiting container loading' },
+  { src: '/images/t3.jpeg', alt: 'Scrap tire bales loaded into a 40-foot high-cube export container' },
+  { src: '/images/t4.jpeg', alt: 'Container loading pattern for baled scrap tires — 24 to 27 MT per container' },
+  { src: '/images/t2.jpeg', alt: 'Compressed passenger and light-truck tire bales at the collection yard' },
   { src: '/images/1.webp', alt: 'OCC bales stacked in warehouse' },
   { src: '/images/2.avif', alt: 'Compressed cardboard bales' },
   { src: '/images/3.webp', alt: 'OCC Grade 11 bales ready for export' },
@@ -26,13 +31,10 @@ const images = [
   { src: '/images/20.jpg', alt: 'Port operations — OCC shipment' },
 ]
 
-// Deterministic span assignments for Pinterest feel (cycles through a pattern)
-const spans = [
-  'row-span-2', 'row-span-1', 'row-span-2', 'row-span-1', 'row-span-2',
-  'row-span-1', 'row-span-2', 'row-span-2', 'row-span-1', 'row-span-2',
-  'row-span-1', 'row-span-2', 'row-span-1', 'row-span-2', 'row-span-1',
-  'row-span-2', 'row-span-1', 'row-span-2', 'row-span-2', 'row-span-1',
-]
+// Deterministic span assignments for the masonry feel. Kept as a repeating
+// pattern so the grid stays balanced however many images are in the list.
+const SPAN_PATTERN = ['row-span-2', 'row-span-1', 'row-span-2', 'row-span-1', 'row-span-2', 'row-span-1', 'row-span-2', 'row-span-2']
+const spanFor = (i: number) => SPAN_PATTERN[i % SPAN_PATTERN.length]
 
 export default function GalleryGrid() {
   const [lightbox, setLightbox] = useState<number | null>(null)
@@ -58,7 +60,7 @@ export default function GalleryGrid() {
         {images.map((img, i) => (
           <div
             key={img.src}
-            className={`${spans[i]} relative overflow-hidden rounded-2xl cursor-pointer group bg-stone-200`}
+            className={`${spanFor(i)} relative overflow-hidden rounded-2xl cursor-pointer group bg-[#EAF1F3]`}
             onClick={() => open(i)}
           >
             <Image
@@ -69,7 +71,7 @@ export default function GalleryGrid() {
               className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
             {/* Hover overlay */}
-            <div className="absolute inset-0 bg-[#1A2E1A]/0 group-hover:bg-[#1A2E1A]/40 transition-all duration-300 flex items-center justify-center">
+            <div className="absolute inset-0 bg-[#10252B]/0 group-hover:bg-[#10252B]/45 transition-all duration-300 flex items-center justify-center">
               <svg className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 w-8 h-8 drop-shadow-lg" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
                 <circle cx="11" cy="11" r="7" /><path d="M21 21l-4.35-4.35" strokeLinecap="round" /><path d="M11 8v6M8 11h6" strokeLinecap="round" />
               </svg>
@@ -119,7 +121,7 @@ export default function GalleryGrid() {
               fill
               sizes="90vw"
               className="object-contain rounded-xl"
-              priority
+              preload
             />
           </div>
 

@@ -1,11 +1,29 @@
-// REVIEW VERSION — Logo6 Theme
-// Original theme backup: git stash or
-// revert to previous commit if needed
-
 "use client";
 
 import { useRef, useEffect } from "react";
 import Image from "next/image";
+import { BaleIcon, InspectIcon, ShipIcon } from "@/components/icons";
+
+const FEATURES = [
+  {
+    Icon: InspectIcon,
+    tile: "icon-tile-green",
+    title: "Grade Verified",
+    description: "Every bale inspected to OCC 11 & 12 standards before export.",
+  },
+  {
+    Icon: BaleIcon,
+    tile: "icon-tile-kraft",
+    title: "Baled & Strapped",
+    description: "Export-standard baling with steel or poly strapping throughout.",
+  },
+  {
+    Icon: ShipIcon,
+    tile: "icon-tile-slate",
+    title: "Port to Port",
+    description: "Philadelphia to all major Indian ports — full documentation included.",
+  },
+];
 
 export default function PhotoSection() {
   const ref = useRef<HTMLElement>(null);
@@ -25,7 +43,7 @@ export default function PhotoSection() {
   }, []);
 
   return (
-    <section ref={ref} className="py-24 px-6 lg:px-12" style={{ backgroundColor: "#FDFAF4" }}>
+    <section ref={ref} className="py-24 px-6 lg:px-12" style={{ backgroundColor: "#FBF8F2" }}>
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
@@ -36,38 +54,37 @@ export default function PhotoSection() {
                 src="/images/occ-bales.webp"
                 alt="OCC bales ready for export — ScraPack Solutions"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
                 preload
               />
             </div>
-            <p className="text-sm mt-3 text-center italic" style={{ color: "#8B6914" }}>
+            <p className="text-sm mt-3 text-center italic" style={{ color: "#8A6224" }}>
               OCC Grade 11 bales — ready for export from Philadelphia
             </p>
           </div>
 
           {/* RIGHT — Description */}
           <div className="reveal delay-200">
-            <span className="text-xs font-bold tracking-[3px] uppercase" style={{ color: "#E8820C" }}>
-              What We Handle
-            </span>
+            <span className="eyebrow">What We Handle</span>
 
             <h2
               className="mt-3 text-4xl font-black leading-tight"
-              style={{ color: "#1A2E1A" }}
+              style={{ color: "#16281F" }}
             >
               Premium OCC Bales,
               <br />
               Export Ready.
             </h2>
 
-            <p className="mt-6 text-lg leading-relaxed" style={{ color: "#4A5568" }}>
+            <p className="mt-6 text-lg leading-relaxed" style={{ color: "#46554E" }}>
               ScraPack Sources OCC Grade 11 and Grade 12 corrugated cardboard
               from verified recyclers across the United States. Every bale is
               inspected, sorted, and strapped to export standards before it
               leaves our yard.
             </p>
 
-            <p className="mt-4 text-base leading-relaxed" style={{ color: "#4A5568" }}>
+            <p className="mt-4 text-base leading-relaxed" style={{ color: "#46554E" }}>
               We handle the full process — from collection and baling in
               Philadelphia to container loading, export documentation, and
               vessel booking to ports across India. Our buyers receive
@@ -76,67 +93,28 @@ export default function PhotoSection() {
 
             {/* Feature rows */}
             <div className="mt-8 space-y-4">
-              <div className="flex items-start gap-4">
-                <div className="rounded-xl p-3 flex-shrink-0" style={{ backgroundColor: "#E8F5E9" }}>
-                  <span className="text-xl">🔍</span>
+              {FEATURES.map(({ Icon, tile, title, description }) => (
+                <div key={title} className="flex items-start gap-4">
+                  <div className={`icon-tile ${tile} w-12 h-12`}>
+                    <Icon size={22} />
+                  </div>
+                  <div>
+                    <p className="font-semibold" style={{ color: "#16281F" }}>
+                      {title}
+                    </p>
+                    <p className="text-sm" style={{ color: "#6C7A73" }}>
+                      {description}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <p className="font-semibold" style={{ color: "#1A2E1A" }}>
-                    Grade Verified
-                  </p>
-                  <p className="text-sm" style={{ color: "#6B7280" }}>
-                    Every bale inspected to OCC 11 &amp; 12 standards before
-                    export.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="rounded-xl p-3 flex-shrink-0" style={{ backgroundColor: "#FFF3E0" }}>
-                  <span className="text-xl">📦</span>
-                </div>
-                <div>
-                  <p className="font-semibold" style={{ color: "#1A2E1A" }}>
-                    Baled &amp; Strapped
-                  </p>
-                  <p className="text-sm" style={{ color: "#6B7280" }}>
-                    Export-standard baling with steel or poly strapping
-                    throughout.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="rounded-xl p-3 flex-shrink-0" style={{ backgroundColor: "#E8F5E9" }}>
-                  <span className="text-xl">🚢</span>
-                </div>
-                <div>
-                  <p className="font-semibold" style={{ color: "#1A2E1A" }}>
-                    Port to Port
-                  </p>
-                  <p className="text-sm" style={{ color: "#6B7280" }}>
-                    Philadelphia to all major Indian ports — full documentation
-                    included.
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
 
             {/* CTA */}
             <div className="mt-10">
-              <a
-                href="/services"
-                className="inline-flex items-center gap-2 text-white font-semibold px-8 py-4 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
-                style={{ backgroundColor: "#1B5E20" }}
-                onMouseEnter={(e) =>
-                  ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#2E7D32")
-                }
-                onMouseLeave={(e) =>
-                  ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#1B5E20")
-                }
-              >
+              <a href="/services" className="btn btn-green btn-md">
                 Learn About Our Process
-                <span>→</span>
+                <span aria-hidden="true">→</span>
               </a>
             </div>
           </div>

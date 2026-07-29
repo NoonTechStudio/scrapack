@@ -1,7 +1,3 @@
-// REVIEW VERSION — Logo6 Theme
-// Original theme backup: git stash or
-// revert to previous commit if needed
-
 "use client";
 
 import { useRef, useEffect } from "react";
@@ -28,31 +24,24 @@ export default function AboutCTA() {
       ref={ref}
       className="py-16 md:py-24 px-6 lg:px-12 text-center"
       style={{
-        background: "linear-gradient(135deg, #FFF8F0, #F1F8E9)",
+        background: "linear-gradient(135deg, #FDF8F0, #F2F9F5)",
       }}
     >
       <div className="max-w-3xl mx-auto">
         <h2
           className="text-3xl sm:text-5xl font-black leading-tight mb-6 reveal"
-          style={{ color: "#1A2E1A" }}
+          style={{ color: "#16281F" }}
         >
           Ready to Work with ScraPack?
         </h2>
 
-        <p className="text-xl mb-10 reveal reveal-delay-1" style={{ color: "#6B7280" }}>
+        <p className="text-xl mb-10 reveal reveal-delay-1" style={{ color: "#6C7A73" }}>
           Whether you are a US OCC supplier or an Indian paper mill — we want
           to hear from you.
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 reveal reveal-delay-2">
-          <a
-            href="/contact"
-            className="inline-flex items-center justify-center px-10 py-5 rounded-full font-bold text-lg text-white transition-all duration-200 hover:scale-105 active:scale-95 hover:bg-[#C96B00] w-full sm:w-auto"
-            style={{
-              backgroundColor: "#E8820C",
-              boxShadow: "0 12px 32px rgba(232,130,12,0.30)",
-            }}
-          >
+          <a href="/contact" className="btn btn-gold btn-lg w-full sm:w-auto">
             Request a Quote
           </a>
           <a
@@ -61,11 +50,11 @@ export default function AboutCTA() {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2.5 px-10 py-5 rounded-full font-bold text-lg text-white transition-all duration-200 hover:scale-105 active:scale-95 w-full sm:w-auto"
             style={{
-              backgroundColor: "#1B5E20",
-              boxShadow: "0 12px 32px rgba(27,94,32,0.20)",
+              backgroundColor: "#175434",
+              boxShadow: "0 12px 32px rgba(23,84,52,0.20)",
             }}
-            onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#2E7D32")}
-            onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#1B5E20")}
+            onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#217344")}
+            onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#175434")}
           >
             <svg
               width="20"

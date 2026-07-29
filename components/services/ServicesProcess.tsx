@@ -1,7 +1,3 @@
-// REVIEW VERSION — Logo6 Theme
-// Original theme backup: git stash or
-// revert to previous commit if needed
-
 "use client";
 
 import { useRef, useEffect } from "react";
@@ -78,18 +74,18 @@ export default function ServicesProcess() {
     <section
       ref={ref}
       className="py-24 px-6 lg:px-12 text-white"
-      style={{ backgroundColor: "#1B5E20" }}
+      style={{ backgroundColor: "#175434" }}
     >
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-6 reveal">
-          <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: "#A5D6A7" }}>
+          <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: "#9FD6B7" }}>
             HOW IT WORKS
           </p>
           <h2 className="text-4xl font-black text-white">
             From Your Yard to Indian Port
           </h2>
-          <p className="text-xl mt-4" style={{ color: "#C8E6C9" }}>
+          <p className="text-xl mt-4" style={{ color: "#C6E7D3" }}>
             A transparent, step-by-step process with no surprises.
           </p>
         </div>
@@ -103,10 +99,11 @@ export default function ServicesProcess() {
             >
               {/* Step number */}
               <div
-                className="w-14 h-14 flex-shrink-0 rounded-full flex items-center justify-center font-black text-white text-lg"
+                className="w-14 h-14 flex-shrink-0 rounded-full flex items-center justify-center font-black text-lg"
                 style={{
-                  backgroundColor: "#E8820C",
-                  boxShadow: "0 4px 16px rgba(232,130,12,0.40)",
+                  backgroundColor: "#E8BA74",
+                  color: "#16281F",
+                  boxShadow: "0 4px 16px rgba(204,159,95,0.40)",
                 }}
               >
                 {step.n}
@@ -121,7 +118,7 @@ export default function ServicesProcess() {
                 }}
               >
                 <p className="font-bold text-white text-lg">{step.title}</p>
-                <p className="text-sm leading-relaxed mt-2" style={{ color: "#A5D6A7" }}>
+                <p className="text-sm leading-relaxed mt-2" style={{ color: "#9FD6B7" }}>
                   {step.description}
                 </p>
               </div>
