@@ -13,7 +13,7 @@ const STEPS = [
     n: "2",
     title: "Price Quotation",
     description:
-      "We provide a competitive offer based on current US OCC market rates and freight costs.",
+      "We provide a competitive offer based on current US market rates for OCC or scrap tires, plus freight costs.",
   },
   {
     n: "3",
@@ -25,7 +25,7 @@ const STEPS = [
     n: "4",
     title: "Material Sourcing",
     description:
-      "We source from our verified US OCC network to fulfill the agreed volume and grade.",
+      "We source from our verified US recycler network — OCC or tire bales — to fulfill the agreed volume and grade.",
   },
   {
     n: "5",
@@ -49,7 +49,7 @@ const STEPS = [
     n: "8",
     title: "Shipping & Delivery",
     description:
-      "Container shipped to buyer's Indian port. ScraPack provides tracking updates until delivery.",
+      "Container shipped to buyer's port of discharge. ScraPack provides tracking updates until delivery.",
   },
 ];
 
@@ -83,7 +83,7 @@ export default function ServicesProcess() {
             HOW IT WORKS
           </p>
           <h2 className="text-4xl font-black text-white">
-            From Your Yard to Indian Port
+            From Your Yard to Your Port
           </h2>
           <p className="text-xl mt-4" style={{ color: "#C6E7D3" }}>
             A transparent, step-by-step process with no surprises.

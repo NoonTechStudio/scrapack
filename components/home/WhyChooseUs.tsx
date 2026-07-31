@@ -13,13 +13,13 @@ const FEATURES = [
     Icon: MapPinIcon,
     title: "Philadelphia, PA",
     description:
-      "Strategically based in one of the USA's top OCC export corridors, with direct access to East Coast shipping ports.",
+      "Strategically based in one of the USA's top recovered-material export corridors, with direct access to East Coast shipping ports.",
   },
   {
     Icon: InspectIcon,
     title: "Grade Verified",
     description:
-      "Every shipment is inspected to OCC 11 and OCC 12 standards. What you order is exactly what arrives at your port.",
+      "Every shipment — OCC or tire bales — is inspected to standard before it ships. What you order is exactly what arrives at your port.",
   },
   {
     Icon: ShipIcon,

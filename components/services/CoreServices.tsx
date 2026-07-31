@@ -16,13 +16,13 @@ const SERVICES = [
     Icon: InspectIcon,
     tile: "icon-tile-green",
     number: "01",
-    title: "OCC Sourcing & Procurement",
+    title: "Sourcing & Procurement",
     description:
-      "We source OCC Grade 11 and Grade 12 material from a verified network of recyclers, exporters, and collection centers across the United States. Every supplier in our network is pre-qualified for grade consistency and volume reliability.",
+      "We source OCC Grade 11 & 12 and baled scrap tires from a verified network of recyclers, collectors, and collection centers across the United States. Every supplier in our network is pre-qualified for grade consistency and volume reliability.",
     features: [
-      "Verified US OCC recycler network",
-      "Grade 11 and Grade 12 procurement",
-      "Consistent volume availability",
+      "Verified US recycler & collector network",
+      "OCC Grade 11 & 12 procurement",
+      "PCR, mixed & truck tire bale sourcing",
       "Competitive market pricing",
     ],
   },
@@ -32,11 +32,11 @@ const SERVICES = [
     number: "02",
     title: "Grading & Quality Inspection",
     description:
-      "Before any bale leaves our yard, it is inspected against ISRI grading standards. OCC Grade 11 must be clean, double-sorted, and free from prohibitive materials. Grade 12 is inspected for acceptable outthrow levels.",
+      "Before any load leaves our yard, it is inspected against the applicable standard — ISRI grading for OCC, ReMA specifications for scrap tires. Cleanliness, moisture, and contamination are checked on every lot.",
     features: [
-      "ISRI grade standard compliance",
+      "ISRI (OCC) & ReMA (tire) compliance",
       "Moisture content verification",
-      "Prohibitive materials check",
+      "Prohibitive materials / rim check",
       "Photo documentation per lot",
     ],
   },
@@ -46,11 +46,11 @@ const SERVICES = [
     number: "03",
     title: "Baling & Export Packing",
     description:
-      "OCC material is processed through industrial balers, compressed to export density, and strapped with steel or poly strapping. Bales are sized and weighted to maximize container utilization and minimize shipping cost per tonne.",
+      "OCC and scrap tires are both processed through industrial balers, hydraulically compressed to export density, and strapped with steel wire or poly strapping. Loads are sized and weighted to maximize container utilization.",
     features: [
       "Industrial baling to export density",
       "Steel and poly strapping options",
-      "Bale weight: 600–1200 kg average",
+      "OCC bales & high-density tire bales",
       "Container-optimized sizing",
     ],
   },
@@ -60,7 +60,7 @@ const SERVICES = [
     number: "04",
     title: "Container Stuffing & Loading",
     description:
-      "We manage the full container stuffing process at our Philadelphia facility. 20-foot and 40-foot containers are loaded to maximum legal capacity. All loading is supervised and photographed for documentation and dispute prevention.",
+      "We manage the full container stuffing process at our Philadelphia facility for both product lines. 20-foot and 40-foot containers are loaded to maximum legal capacity, supervised and photographed for documentation and dispute prevention.",
     features: [
       "20ft and 40ft container options",
       "Maximum capacity loading",
@@ -74,7 +74,7 @@ const SERVICES = [
     number: "05",
     title: "Export Documentation",
     description:
-      "We prepare and coordinate all export documents required for US customs clearance and Indian import compliance. Our documentation is accurate, complete, and delivered before vessel departure.",
+      "We prepare and coordinate all export documents required for US customs clearance and destination-country import compliance — for OCC and tire shipments alike. Documentation is accurate, complete, and delivered before vessel departure.",
     features: [
       "Commercial Invoice",
       "Packing List",
@@ -90,7 +90,7 @@ const SERVICES = [
     number: "06",
     title: "Shipping & Port Coordination",
     description:
-      "ScraPack coordinates with freight forwarders and shipping lines to book vessel space and ensure timely departure from US East Coast ports. We track shipments and keep buyers updated at every milestone.",
+      "ScraPack coordinates with freight forwarders and shipping lines to book vessel space and ensure timely departure from major US ports, for both OCC and tire cargo. We track shipments and keep buyers updated at every milestone.",
     features: [
       "US East Coast port shipping",
       "Major Indian ports covered",
@@ -127,7 +127,7 @@ export default function CoreServices() {
             Everything You Need,<br />Under One Roof
           </h2>
           <p className="text-xl mt-6 max-w-2xl mx-auto" style={{ color: "#6C7A73" }}>
-            ScraPack is not a broker. We are your end-to-end recovered-material export partner.
+            ScraPack is not a broker. One process, two product lines — we are your end-to-end recovered-material export partner.
           </p>
         </div>
 

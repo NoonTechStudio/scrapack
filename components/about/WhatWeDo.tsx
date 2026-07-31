@@ -1,18 +1,18 @@
 "use client";
 
 import { useRef, useEffect } from "react";
-import { BaleIcon, LayersIcon } from "@/components/icons";
+import { BaleIcon, TireIcon } from "@/components/icons";
 
 const steps = [
   {
     n: 1,
-    title: "OCC Collection",
-    desc: "Recyclers across the US collect and bale corrugated material",
+    title: "Material Collection",
+    desc: "Recyclers across the US collect and bale OCC or scrap tires",
   },
   {
     n: 2,
     title: "Grade Inspection",
-    desc: "ScraPack inspects and verifies OCC 11 or OCC 12 grade standards",
+    desc: "ScraPack verifies OCC or ReMA tire grade standards on every lot",
   },
   {
     n: 3,
@@ -26,31 +26,33 @@ const steps = [
   },
   {
     n: 5,
-    title: "India Delivery",
-    desc: "Container shipped to buyer's port of discharge across India",
+    title: "Worldwide Delivery",
+    desc: "Container shipped to buyer's port of discharge worldwide",
   },
 ];
 
-const grades = [
+const products = [
   {
     Icon: BaleIcon,
     iconTile: "icon-tile-green",
-    grade: "OCC Grade 11",
-    subtitle: "Double-Sorted OCC",
-    text: "The cleanest, most premium grade of Old Corrugated Containers. Free from all prohibitive materials. Double-sorted, low moisture, baled and strapped. Preferred by premium Indian paper mills for high-quality recycled board production.",
-    tags: ["Double sorted", "Low moisture", "Baled & strapped", "Export ready"],
+    grade: "OCC Grade 11 & 12",
+    subtitle: "Corrugated Cardboard",
+    text: "Double-sorted and mixed grades of Old Corrugated Containers, baled and strapped to export density. Preferred by paper mills for recycled board production.",
+    tags: ["Double sorted", "Mixed grade", "Baled & strapped", "Export ready"],
     bg: "#F2F9F5",
     border: "1px solid rgba(33,115,68,0.15)",
+    href: "/services#occ-grades",
   },
   {
-    Icon: LayersIcon,
+    Icon: TireIcon,
     iconTile: "icon-tile-kraft",
-    grade: "OCC Grade 12",
-    subtitle: "Mixed OCC",
-    text: "Standard-sorted Old Corrugated Containers with allowable outthrows. Cost-effective grade for high-volume mills. Consistent supply with full export documentation included on every shipment.",
-    tags: ["Standard sort", "High volume", "Export ready", "Cost effective"],
+    grade: "Baled Scrap Tires",
+    subtitle: "PCR, Mixed & Truck Bales",
+    text: "End-of-life tires hydraulically compressed into high-density export bales for pyrolysis, tire-derived fuel, and rubber recycling worldwide.",
+    tags: ["Steel wire tied", "Rims removed", "High density", "Export ready"],
     bg: "#FAF0DF",
     border: "1px solid rgba(204,159,95,0.20)",
+    href: "/services#tire-bales",
   },
 ];
 
@@ -84,7 +86,7 @@ export default function WhatWeDo() {
             How ScraPack Operates
           </h2>
           <p className="text-lg mt-4 max-w-2xl mx-auto reveal reveal-delay-2" style={{ color: "#46554E" }}>
-            We sit at the center of the USA → India OCC trade corridor.
+            We sit at the center of two US export corridors — OCC and scrap tires.
           </p>
         </div>
 
@@ -100,7 +102,7 @@ export default function WhatWeDo() {
           >
             <h3 className="font-black text-2xl">The Trade Flow</h3>
             <p className="text-sm mt-1" style={{ color: "#9FD6B7" }}>
-              From US recycler to Indian paper mill
+              From US recycler to your port of discharge
             </p>
 
             <div className="mt-8">
@@ -134,12 +136,13 @@ export default function WhatWeDo() {
             </div>
           </div>
 
-          {/* Right — grade cards */}
+          {/* Right — product cards, one per material */}
           <div className="flex flex-col gap-6 reveal reveal-delay-2">
-            {grades.map((g) => (
-              <div
+            {products.map((g) => (
+              <a
                 key={g.grade}
-                className="rounded-3xl p-8"
+                href={g.href}
+                className="block rounded-3xl p-8 transition-transform duration-300 hover:-translate-y-1"
                 style={{
                   backgroundColor: g.bg,
                   border: g.border,
@@ -171,7 +174,7 @@ export default function WhatWeDo() {
                     </span>
                   ))}
                 </div>
-              </div>
+              </a>
             ))}
           </div>
 

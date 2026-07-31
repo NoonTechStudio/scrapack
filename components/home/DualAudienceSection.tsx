@@ -101,16 +101,16 @@ export default function DualAudienceSection() {
               className="text-2xl font-bold mt-6 mb-3"
               style={{ color: "#175434" }}
             >
-              US OCC Recyclers &amp; Exporters
+              US Recyclers &amp; Collectors
             </h3>
             <p className="leading-relaxed mb-6" style={{ color: "#46554E" }}>
-              We&apos;re your consistent, reliable buyer. ScraPack purchases OCC
-              Grade 11 and 12 at competitive rates with prompt payment — so you
-              can focus on collection.
+              We&apos;re your consistent, reliable buyer. ScraPack purchases both
+              OCC Grade 11 &amp; 12 and baled scrap tires at competitive rates
+              with prompt payment — so you can focus on collection.
             </p>
             <ul className="space-y-3 mb-8">
+              <CheckGreen text="OCC and scrap tire material purchased" />
               <CheckGreen text="Competitive market-based pricing" />
-              <CheckGreen text="Consistent volume purchases" />
               <CheckGreen text="Reliable, on-time payments" />
             </ul>
             <a href="/contact" className="btn btn-green btn-sm">
@@ -130,15 +130,15 @@ export default function DualAudienceSection() {
               className="text-2xl font-bold mt-6 mb-3"
               style={{ color: "#6B4A15" }}
             >
-              Indian Paper Mills &amp; Traders
+              Mills, Processors &amp; Traders
             </h3>
             <p className="leading-relaxed mb-6" style={{ color: "#46554E" }}>
-              Source premium OCC directly from the USA. Verified grades, full
-              export documentation, and flexible shipping schedules to all major
-              Indian ports.
+              Source premium OCC or baled scrap tires directly from the USA.
+              Verified grades, full export documentation, and flexible shipping
+              schedules to all major world ports.
             </p>
             <ul className="space-y-3 mb-8">
-              <CheckKraft text="OCC Grade 11 & 12 certified" />
+              <CheckKraft text="OCC Grade 11 & 12 and tire bales certified" />
               <CheckKraft text="Full export documentation" />
               <CheckKraft text="Flexible port scheduling" />
             </ul>

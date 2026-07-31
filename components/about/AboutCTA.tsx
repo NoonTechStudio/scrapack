@@ -36,8 +36,8 @@ export default function AboutCTA() {
         </h2>
 
         <p className="text-xl mb-10 reveal reveal-delay-1" style={{ color: "#6C7A73" }}>
-          Whether you are a US OCC supplier or an Indian paper mill — we want
-          to hear from you.
+          Whether you supply OCC, scrap tires, or both — or you&apos;re a mill or
+          processor looking to buy — we want to hear from you.
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 reveal reveal-delay-2">

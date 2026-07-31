@@ -1,6 +1,7 @@
 import ServicesHero from "@/components/services/ServicesHero";
 import CoreServices from "@/components/services/CoreServices";
 import OCCGradeDetails from "@/components/services/OCCGradeDetails";
+import TireBaleDetails from "@/components/services/TireBaleDetails";
 import ServicesProcess from "@/components/services/ServicesProcess";
 import WhoWeServe from "@/components/services/WhoWeServe";
 import ServicesFAQ from "@/components/services/ServicesFAQ";
@@ -29,6 +30,7 @@ export default function ServicesPage() {
       <ServicesHero />
       <CoreServices />
       <OCCGradeDetails />
+      <TireBaleDetails />
       <ServicesProcess />
       <WhoWeServe />
       <ServicesFAQ />

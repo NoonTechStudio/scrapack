@@ -2,7 +2,7 @@
 
 import { useRef, useEffect } from "react";
 
-export default function OCCGradeDetails() {
+export default function TireBaleDetails() {
   const ref = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -20,90 +20,85 @@ export default function OCCGradeDetails() {
   }, []);
 
   return (
-    <section id="occ-grades" ref={ref} className="py-24 px-6 lg:px-12 scroll-mt-24" style={{ backgroundColor: "#FBF8F2" }}>
+    <section id="tire-bales" ref={ref} className="py-24 px-6 lg:px-12 scroll-mt-24 bg-white">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-6 reveal">
           <p className="eyebrow mb-3" style={{ color: "#8A6224" }}>
-            PRODUCT 1 OF 2 — OCC PROGRAM
+            PRODUCT 2 OF 2 — TIRE PROGRAM
           </p>
           <h2 className="text-4xl sm:text-5xl font-black" style={{ color: "#16281F" }}>
-            OCC Grade 11 &amp; Grade 12
+            Baled Scrap Tires
           </h2>
           <p className="text-xl mt-6 max-w-2xl mx-auto" style={{ color: "#6C7A73" }}>
-            The two most traded corrugated grades in the global recovered paper market.
+            End-of-life tires, hydraulically compressed and export-ready under
+            ReMA (formerly ISRI) specifications.
           </p>
         </div>
 
         {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
 
-          {/* Grade 11 */}
-          <div className="reveal reveal-delay-1 bg-white rounded-3xl overflow-hidden shadow-lg border border-[#217344]/15">
-            <div className="h-2" style={{ backgroundColor: "#217344" }} />
+          {/* PCR & Mixed */}
+          <div className="reveal reveal-delay-1 bg-white rounded-3xl overflow-hidden shadow-lg border border-[#274C56]/15">
+            <div className="h-2" style={{ backgroundColor: "#274C56" }} />
             <div className="p-10">
               <span
                 className="inline-block px-4 py-2 rounded-full text-xs font-bold tracking-widest"
-                style={{ backgroundColor: "#E6F2EA", color: "#175434" }}
+                style={{ backgroundColor: "#EAF1F3", color: "#274C56" }}
               >
-                OCC GRADE 11
+                PASSENGER &amp; MIXED
               </span>
 
               <h3 className="text-3xl font-black mt-4" style={{ color: "#16281F" }}>
-                Double-Sorted OCC
+                PCR &amp; Mixed Tire Bales
               </h3>
               <p className="text-sm mt-1" style={{ color: "#6C7A73" }}>
-                ISRI Grade 11 · PS-2011 · Double Sorted
+                Passenger Car (PCR) · Light Truck (LTR) · SUV
               </p>
 
-              <div className="border-t mt-6 mb-6" style={{ borderColor: "rgba(33,115,68,0.15)" }} />
+              <div className="border-t mt-6 mb-6" style={{ borderColor: "rgba(39,76,86,0.15)" }} />
 
               <p className="leading-relaxed" style={{ color: "#46554E" }}>
-                Old corrugated containers — baled corrugated cardboard that has been
-                double-sorted to remove all prohibitive and outthrow materials. The
-                cleanest, highest-value OCC grade available for export.
+                Whole passenger tires, or mixed PCR/LTR/SUV loads, hydraulically
+                compressed to high density. Clean, dry, and consistently graded
+                for export.
               </p>
 
               {/* Spec table */}
               <div className="mt-8">
                 <p className="font-bold text-sm mb-4" style={{ color: "#16281F" }}>
-                  Grade Specifications
+                  Bale Specifications
                 </p>
                 {[
-                  ["Prohibitive Materials", "None"],
-                  ["Outthrows", "0.5% Max"],
-                  ["Moisture Content", "< 12%"],
-                  ["Bale Weight", "600–1000 kg"],
+                  ["Moisture", "Low"],
+                  ["Dirt / Contamination", "Minimal"],
+                  ["Bale Density", "High compression"],
+                  ["Net Weight", "24–27 MT / container"],
                 ].map(([label, value]) => (
                   <div key={label} className="flex justify-between py-3 border-b border-gray-100">
                     <span className="text-sm" style={{ color: "#6C7A73" }}>{label}</span>
-                    <span className="text-sm font-bold" style={{ color: "#175434" }}>{value}</span>
+                    <span className="text-sm font-bold" style={{ color: "#274C56" }}>{value}</span>
                   </div>
                 ))}
               </div>
 
               {/* Best for */}
-              <div className="mt-8 rounded-2xl p-5" style={{ backgroundColor: "#E6F2EA" }}>
-                <p className="font-bold text-sm mb-3" style={{ color: "#175434" }}>Best For</p>
-                <p className="text-sm" style={{ color: "#217344" }}>
-                  Premium Indian paper mills producing high-grade recycled board,
-                  tissue, and specialty paper products.
+              <div className="mt-8 rounded-2xl p-5" style={{ backgroundColor: "#EAF1F3" }}>
+                <p className="font-bold text-sm mb-3" style={{ color: "#274C56" }}>Best For</p>
+                <p className="text-sm" style={{ color: "#274C56" }}>
+                  Pyrolysis plants, tire-derived fuel (TDF) programs, and general
+                  rubber recycling operations.
                 </p>
               </div>
 
-              <a
-                href="/contact"
-                className="inline-flex items-center justify-center mt-8 px-6 py-3 rounded-full font-semibold text-sm text-white"
-                style={{ backgroundColor: "#175434" }}
-                onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#217344")}
-                onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#175434")}
-              >
-                Request Grade 11 Pricing
+              <a href="/contact#quote-form" className="btn btn-slate btn-sm mt-8">
+                Request PCR/Mixed Pricing
               </a>
             </div>
           </div>
 
-          {/* Grade 12 */}
+          {/* Truck & Whole */}
           <div className="reveal reveal-delay-2 bg-white rounded-3xl overflow-hidden shadow-lg border border-[#E8BA74]/15">
             <div className="h-2" style={{ backgroundColor: "#CC9F5F" }} />
             <div className="p-10">
@@ -111,34 +106,34 @@ export default function OCCGradeDetails() {
                 className="inline-block px-4 py-2 rounded-full text-xs font-bold tracking-widest"
                 style={{ backgroundColor: "#FAF0DF", color: "#8A6224" }}
               >
-                OCC GRADE 12
+                TRUCK &amp; WHOLE
               </span>
 
               <h3 className="text-3xl font-black mt-4" style={{ color: "#16281F" }}>
-                Mixed OCC
+                Truck &amp; Whole Tire Bales
               </h3>
               <p className="text-sm mt-1" style={{ color: "#6C7A73" }}>
-                ISRI Grade 12 · PS-2012 · Mixed OCC
+                Commercial · Bus · Unbaled on Request
               </p>
 
               <div className="border-t mt-6 mb-6" style={{ borderColor: "rgba(204,159,95,0.15)" }} />
 
               <p className="leading-relaxed" style={{ color: "#46554E" }}>
-                Old corrugated containers — baled corrugated material with allowable
-                levels of outthrow materials. A cost-effective grade offering high
-                volume availability for mills that process mixed recovered paper.
+                Large commercial and bus tires compressed into export bales, or
+                whole scrap tires supplied loose where your process or local
+                regulations require it.
               </p>
 
               {/* Spec table */}
               <div className="mt-8">
                 <p className="font-bold text-sm mb-4" style={{ color: "#16281F" }}>
-                  Grade Specifications
+                  Bale Specifications
                 </p>
                 {[
-                  ["Prohibitive Materials", "None"],
-                  ["Outthrows", "3% Max"],
-                  ["Moisture Content", "< 15%"],
-                  ["Bale Weight", "600–1200 kg"],
+                  ["Steel Rims", "Removed"],
+                  ["Wire", "Steel strapping"],
+                  ["Loading", "40' HC container"],
+                  ["Net Weight", "24–27 MT / container"],
                 ].map(([label, value]) => (
                   <div key={label} className="flex justify-between py-3 border-b border-gray-100">
                     <span className="text-sm" style={{ color: "#6C7A73" }}>{label}</span>
@@ -151,13 +146,13 @@ export default function OCCGradeDetails() {
               <div className="mt-8 rounded-2xl p-5" style={{ backgroundColor: "#FAF0DF" }}>
                 <p className="font-bold text-sm mb-3" style={{ color: "#8A6224" }}>Best For</p>
                 <p className="text-sm" style={{ color: "#8A6224" }}>
-                  High-volume paper mills and traders seeking cost-effective OCC
-                  supply for standard kraft liner and corrugated medium production.
+                  Retreading, shredding, crumb rubber production, and civil
+                  engineering applications.
                 </p>
               </div>
 
-              <a href="/contact" className="btn btn-gold btn-sm mt-8">
-                Request Grade 12 Pricing
+              <a href="/contact#quote-form" className="btn btn-gold btn-sm mt-8">
+                Request Truck/Whole Pricing
               </a>
             </div>
           </div>

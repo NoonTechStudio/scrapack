@@ -12,7 +12,7 @@ const cards = [
   {
     Icon: FactoryIcon,
     title: "East Coast Recovery Hub",
-    text: "Pennsylvania and surrounding states generate millions of tonnes of OCC annually from retail, warehousing, and manufacturing.",
+    text: "Pennsylvania and surrounding states generate millions of tonnes of OCC and scrap tires annually from retail, warehousing, and automotive activity.",
   },
   {
     Icon: ShipIcon,

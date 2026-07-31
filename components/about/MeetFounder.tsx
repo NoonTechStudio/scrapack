@@ -43,15 +43,15 @@ export default function MeetFounder() {
 
             {/* Bio */}
             <p className="text-[#46554E] text-sm leading-relaxed mt-5 max-w-sm">
-              Kashyap co-founded ScraPack Solutions with a deep understanding of the US OCC
-              recycling landscape and a clear vision for building a reliable export corridor
-              to India. Based in Philadelphia, he manages supplier relationships, trade
-              operations, and business development.
+              Kashyap co-founded ScraPack Solutions with a deep understanding of the US
+              recovered-material landscape — both OCC and scrap tires — and a clear vision
+              for building reliable export corridors worldwide. Based in Philadelphia, he
+              manages supplier relationships, trade operations, and business development.
             </p>
 
             {/* Tags */}
             <div className="flex flex-wrap justify-center gap-2 mt-6">
-              {["OCC Trading", "US Supplier Relations", "Export Operations", "Business Development"].map((tag) => (
+              {["OCC & Tire Trading", "US Supplier Relations", "Export Operations", "Business Development"].map((tag) => (
                 <span key={tag} className="bg-white border border-[#217344]/20 text-[#175434] text-xs font-semibold px-4 py-2 rounded-full shadow-sm">
                   {tag}
                 </span>
@@ -104,13 +104,13 @@ export default function MeetFounder() {
             <p className="text-[#46554E] text-sm leading-relaxed mt-5 max-w-sm">
               Meghal co-founded ScraPack Solutions bringing expertise in trade coordination
               and customer relations. She plays a key role in managing buyer relationships
-              with Indian paper mills and traders, ensuring smooth communication and
+              across both the OCC and scrap tire programs, ensuring smooth communication and
               consistent service delivery across the supply chain.
             </p>
 
             {/* Tags */}
             <div className="flex flex-wrap justify-center gap-2 mt-6">
-              {["Trade Coordination", "Buyer Relations", "India Market", "Operations"].map((tag) => (
+              {["Trade Coordination", "Buyer Relations", "Global Markets", "Operations"].map((tag) => (
                 <span key={tag} className="bg-white border border-[#CC9F5F]/35 text-[#8A6224] text-xs font-semibold px-4 py-2 rounded-full shadow-sm">
                   {tag}
                 </span>

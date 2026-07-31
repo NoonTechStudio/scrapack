@@ -4,44 +4,54 @@ import { useState } from "react";
 
 const FAQS = [
   {
+    question: "What materials does ScraPack export?",
+    answer:
+      "We run two parallel export programs: OCC Grade 11 & 12 corrugated cardboard for the paper industry, and baled scrap tires (PCR, mixed, truck, and whole) for pyrolysis, tire-derived fuel, and rubber recycling. Both are handled with the same sourcing, grading, and documentation standard.",
+  },
+  {
     question: "What OCC grades does ScraPack export?",
     answer:
-      "ScraPack specializes in OCC Grade 11 (Double-Sorted OCC) and OCC Grade 12 (Mixed OCC). These are the two most widely traded corrugated grades in the global recovered paper market and are in consistent demand from Indian paper mills.",
+      "ScraPack trades OCC Grade 11 (Double-Sorted OCC) and OCC Grade 12 (Mixed OCC) — the two most widely traded corrugated grades in the global recovered paper market, in consistent demand from paper mills worldwide.",
+  },
+  {
+    question: "What types of scrap tire bales do you supply?",
+    answer:
+      "We supply passenger car (PCR) bales, mixed PCR/LTR/SUV bales, truck and bus tire bales, and whole scrap tires on request — all hydraulically compressed to high density under ReMA (formerly ISRI) specifications.",
   },
   {
     question: "What is the minimum order quantity?",
     answer:
-      "Our typical minimum order is one full 20-foot container, which holds approximately 18–22 metric tonnes of baled OCC depending on bale density. We also handle 40-foot containers for larger orders of 22–26 metric tonnes.",
+      "Our typical minimum order is one full 20-foot container, which holds approximately 18–22 metric tonnes of baled OCC or 24–27 metric tonnes of baled scrap tires depending on density. We also handle 40-foot high-cube containers for larger orders.",
   },
   {
-    question: "Which Indian ports do you ship to?",
+    question: "Which ports do you ship to?",
     answer:
-      "We ship to all major Indian ports including Nhava Sheva (JNPT) Mumbai, Mundra, Chennai, Kolkata, Vizag, and Pipavav. If your required port is not listed, contact us — we work with freight forwarders covering the full Indian coastline.",
+      "We ship FOB from major US ports — including Philadelphia, Houston, Long Beach, Los Angeles, Savannah, Charleston, Norfolk, Newark, and Baltimore — to all major destination ports across India, Southeast Asia, the Middle East, and beyond.",
   },
   {
     question: "What payment terms do you offer?",
     answer:
-      "We work with Letter of Credit (LC) at sight, LC usance (30/60/90 days), and TT (Telegraphic Transfer) arrangements depending on the relationship and order size. Payment terms are discussed and agreed before contract confirmation.",
+      "We work with Letter of Credit (LC) at sight, LC usance (30/60/90 days), and TT (Telegraphic Transfer) arrangements depending on the relationship and order size, for both OCC and tire shipments. Payment terms are discussed and agreed before contract confirmation.",
   },
   {
-    question: "How long does shipping take from Philadelphia to India?",
+    question: "How long does shipping take?",
     answer:
-      "Transit time from US East Coast ports to major Indian ports is typically 20–28 days depending on the vessel route and destination port. We provide the estimated arrival date with every booking confirmation.",
+      "Transit time from US ports to major destination ports is typically 20–35 days depending on the vessel route and destination port. We provide the estimated arrival date with every booking confirmation, for OCC and tire cargo alike.",
   },
   {
     question: "Do you provide a Certificate of Origin?",
     answer:
-      "Yes. A US Certificate of Origin is provided with every shipment as part of our standard export documentation package. We also provide phytosanitary certificates where required by Indian customs.",
+      "Yes. A US Certificate of Origin is provided with every shipment as part of our standard export documentation package. We also provide phytosanitary or weight certificates where required by destination customs.",
   },
   {
-    question: "Can US recyclers sell directly to ScraPack?",
+    question: "Can US recyclers or collectors sell directly to ScraPack?",
     answer:
-      "Absolutely. We are always looking to expand our US supplier network. If you are an OCC recycler or exporter in the United States with consistent Grade 11 or Grade 12 material available, contact us directly to discuss pricing and pickup arrangements.",
+      "Absolutely. We are always looking to expand our US supplier network on both product lines. If you are an OCC recycler or a scrap tire collector in the United States with consistent material available, contact us directly to discuss pricing and pickup arrangements.",
   },
   {
     question: "How do I get a price quote?",
     answer:
-      "Simply use the Request a Quote form on our website or send us a WhatsApp message. Share the OCC grade, quantity in metric tonnes, and your preferred port of discharge — and we will respond with a competitive offer within 24 hours.",
+      "Simply use the Request a Quote form on our website or send us a WhatsApp message. Share your material — OCC grade or tire bale type — quantity in metric tonnes, and preferred port of discharge, and we will respond with a competitive offer within 24 hours.",
   },
 ];
 

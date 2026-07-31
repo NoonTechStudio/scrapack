@@ -6,17 +6,17 @@ const STEPS = [
   {
     n: "1",
     title: "Inquiry",
-    description: "Share your OCC grade and monthly quantity requirement",
+    description: "Share your material — OCC or scrap tires — grade, and monthly quantity",
   },
   {
     n: "2",
     title: "Pricing",
-    description: "Receive competitive pricing based on live OCC market rates",
+    description: "Receive competitive pricing based on live market rates",
   },
   {
     n: "3",
     title: "Sourcing",
-    description: "We source from verified US OCC recyclers and exporters",
+    description: "We source from our verified US recycler and collector network",
   },
   {
     n: "4",
@@ -26,7 +26,7 @@ const STEPS = [
   {
     n: "5",
     title: "Delivery",
-    description: "OCC delivered to your Indian port of discharge",
+    description: "Material delivered to your port of discharge",
   },
 ];
 

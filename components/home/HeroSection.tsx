@@ -13,7 +13,7 @@ const TRUST = ["Licensed US Exporter", "Grade Verified", "Philadelphia, PA 19115
 
 const STATS = [
   { label: "Export Ready", value: "OCC 11 & 12" },
-  { label: "Also Exporting", value: "Baled Scrap Tires" },
+  { label: "Export Ready", value: "Baled Scrap Tires" },
   { label: "US Based", value: "Philadelphia, PA" },
 ];
 
@@ -77,7 +77,7 @@ export default function HeroSection() {
               }}
             >
               <GlobeIcon size={16} />
-              USA → India &nbsp;·&nbsp; Recovered Material Exporters
+              USA → Worldwide &nbsp;·&nbsp; OCC &amp; Scrap Tire Exporters
             </div>
 
             {/* Headline */}
@@ -86,19 +86,19 @@ export default function HeroSection() {
                 className="block text-4xl sm:text-6xl lg:text-7xl"
                 style={{ color: "#16281F" }}
               >
-                America&apos;s OCC
+                Two Materials.
               </span>
               <span
                 className="block text-4xl sm:text-6xl lg:text-7xl"
                 style={{ color: "#16281F" }}
               >
-                to India&apos;s Mills
+                One Export Partner.
               </span>
               <span
                 className="block text-2xl sm:text-4xl mt-3"
                 style={{ color: "#A87C33" }}
               >
-                Delivered with Trust.
+                OCC &amp; Scrap Tires, Delivered with Trust.
               </span>
             </h1>
 
@@ -116,7 +116,7 @@ export default function HeroSection() {
             {/* Stats row */}
             <div className="grid grid-cols-3 gap-3 sm:flex sm:flex-wrap sm:gap-10 mb-9">
               {STATS.map(({ label, value }) => (
-                <div key={label} className="border-l-2 pl-3" style={{ borderColor: "#E8BA74" }}>
+                <div key={value} className="border-l-2 pl-3" style={{ borderColor: "#E8BA74" }}>
                   <p
                     className="text-[10px] sm:text-xs font-medium tracking-wide uppercase mb-1"
                     style={{ color: "#6C7A73" }}
@@ -138,7 +138,7 @@ export default function HeroSection() {
               >
                 Request a Quote
               </a>
-              <a href="#grades" className="btn btn-outline btn-lg w-full sm:w-auto">
+              <a href="#products" className="btn btn-outline btn-lg w-full sm:w-auto">
                 Explore Our Products
               </a>
             </div>
@@ -156,40 +156,76 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* ── RIGHT: Floating card mockup — desktop only ── */}
+          {/* ── RIGHT: Two equal product cards — desktop only ── */}
           <div className="hidden lg:flex items-center justify-center relative h-[540px]">
-            {/* Main grade card */}
+            {/* Card 1 — OCC */}
             <div
-              className="absolute bg-white rounded-3xl p-8 w-72 shadow-2xl border z-10"
+              className="absolute top-0 left-0 bg-white rounded-3xl p-7 w-64 shadow-2xl border z-10"
               style={{
                 borderColor: "rgba(39,76,86,0.10)",
                 animation: "floatA 3.5s ease-in-out infinite",
               }}
             >
-              <p className="eyebrow mb-4">Export Grade OCC</p>
+              <p className="eyebrow mb-3">Export Grade OCC</p>
               <p
-                className="text-6xl font-black leading-none mb-5"
+                className="text-5xl font-black leading-none mb-4"
                 style={{ color: "#175434" }}
               >
                 11 / 12
               </p>
-              <div className="w-full h-px mb-5" style={{ backgroundColor: "#EAF1F3" }} />
-              <ul className="space-y-3.5 text-sm mb-6" style={{ color: "#46554E" }}>
+              <div className="w-full h-px mb-4" style={{ backgroundColor: "#EAF1F3" }} />
+              <ul className="space-y-3 text-sm mb-5" style={{ color: "#46554E" }}>
                 <li className="flex items-center gap-2.5">
                   <span style={{ color: "#217344" }}>
-                    <BaleIcon size={17} />
+                    <BaleIcon size={16} />
                   </span>
                   Double-sorted, baled
                 </li>
                 <li className="flex items-center gap-2.5">
                   <span style={{ color: "#217344" }}>
-                    <ContainerIcon size={17} />
+                    <ContainerIcon size={16} />
                   </span>
-                  Optimised container loading
+                  Optimised loading
+                </li>
+              </ul>
+              <a
+                href="/contact"
+                className="text-sm font-bold inline-flex items-center gap-1.5 hover:gap-2.5 transition-all"
+                style={{ color: "#175434" }}
+              >
+                Get OCC Pricing →
+              </a>
+            </div>
+
+            {/* Card 2 — Tires (equal size/weight to the OCC card) */}
+            <div
+              className="absolute bottom-4 right-0 bg-white rounded-3xl p-7 w-64 shadow-2xl border z-10"
+              style={{
+                borderColor: "rgba(204,159,95,0.25)",
+                animation: "floatB 4.2s ease-in-out 1.5s infinite",
+              }}
+            >
+              <p className="eyebrow mb-3">Baled Scrap Tires</p>
+              <p
+                className="text-5xl font-black leading-none mb-4"
+                style={{ color: "#8A6224" }}
+              >
+                24–27
+              </p>
+              <p className="text-xs font-semibold tracking-wide uppercase -mt-3 mb-4" style={{ color: "#6C7A73" }}>
+                MT per 40&apos; HC
+              </p>
+              <div className="w-full h-px mb-4" style={{ backgroundColor: "#F6E7CE" }} />
+              <ul className="space-y-3 text-sm mb-5" style={{ color: "#46554E" }}>
+                <li className="flex items-center gap-2.5">
+                  <span style={{ color: "#CC9F5F" }}>
+                    <TireIcon size={16} />
+                  </span>
+                  PCR, mixed &amp; truck bales
                 </li>
                 <li className="flex items-center gap-2.5">
-                  <span style={{ color: "#217344" }}>
-                    <DocumentIcon size={17} />
+                  <span style={{ color: "#CC9F5F" }}>
+                    <DocumentIcon size={16} />
                   </span>
                   Export documentation included
                 </li>
@@ -199,13 +235,13 @@ export default function HeroSection() {
                 className="text-sm font-bold inline-flex items-center gap-1.5 hover:gap-2.5 transition-all"
                 style={{ color: "#8A6224" }}
               >
-                Get Current Pricing →
+                Get Tire Pricing →
               </a>
             </div>
 
-            {/* Floating card A — Philadelphia */}
+            {/* Floating badge — Philadelphia */}
             <div
-              className="absolute top-4 left-0 bg-white rounded-2xl shadow-lg p-4 border text-sm z-20"
+              className="absolute bottom-2 left-0 bg-white rounded-2xl shadow-lg p-4 border text-sm z-20"
               style={{
                 borderColor: "rgba(39,76,86,0.08)",
                 animation: "floatC 3.8s ease-in-out 0.8s infinite",
@@ -220,36 +256,6 @@ export default function HeroSection() {
               <p className="text-xs mt-0.5" style={{ color: "#6C7A73" }}>
                 Port of Export
               </p>
-            </div>
-
-            {/* Floating card B — tire programme */}
-            <div
-              className="absolute bottom-20 -right-2 rounded-2xl shadow-lg p-4 text-sm z-20"
-              style={{
-                backgroundColor: "#E8BA74",
-                color: "#16281F",
-                animation: "floatB 4.2s ease-in-out 1.5s infinite",
-              }}
-            >
-              <p className="font-bold flex items-center gap-2">
-                <TireIcon size={16} />
-                Baled Scrap Tires
-              </p>
-              <p className="text-xs mt-0.5" style={{ color: "rgba(22,40,31,0.65)" }}>
-                24–27 MT / 40&apos; HC
-              </p>
-            </div>
-
-            {/* Floating card C — grade badge */}
-            <div
-              className="absolute top-20 right-2 rounded-xl shadow-lg px-4 py-3 text-xs font-bold text-white z-20 flex items-center gap-1.5"
-              style={{
-                backgroundColor: "#175434",
-                animation: "floatA 3.5s ease-in-out 0.4s infinite",
-              }}
-            >
-              OCC Grade 11
-              <CheckIcon size={13} strokeWidth={2.8} />
             </div>
           </div>
         </div>

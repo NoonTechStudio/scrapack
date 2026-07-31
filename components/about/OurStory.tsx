@@ -4,8 +4,8 @@ import { useRef, useEffect } from "react";
 import { CheckIcon, HandshakeIcon } from "@/components/icons";
 
 const bulletItems = [
-  "OCC Grade 11 & 12 Specialist",
-  "USA → India Trade Corridor",
+  "OCC & Baled Scrap Tire Exporter",
+  "USA → Worldwide Trade Corridor",
   "Licensed US Export Trading Company",
 ];
 
@@ -44,27 +44,30 @@ export default function OurStory() {
               style={{ color: "#16281F" }}
             >
               From Philadelphia to<br />
-              India&apos;s Paper Mills
+              Mills &amp; Processors Worldwide
             </h2>
 
             <div className="mt-6 space-y-5 text-lg leading-relaxed" style={{ color: "#46554E" }}>
               <p>
                 ScraPack Solutions LLC was founded with a single, clear mission —
-                to create a reliable, transparent bridge between the Old Corrugated
-                Container (OCC) recycling industry in the United States and the
-                paper manufacturing sector in India.
+                to create a reliable, transparent bridge between US recyclers and
+                buyers worldwide. We run two parallel export programs: Old
+                Corrugated Container (OCC) recycling for the paper industry, and
+                baled scrap tires for the rubber and energy-recovery industries.
               </p>
               <p>
                 Based in Philadelphia, Pennsylvania, we are strategically positioned
-                in one of the most active OCC collection corridors on the East Coast.
-                Our location gives us direct access to a strong network of certified
-                OCC recyclers, exporters, and logistics partners.
+                in one of the most active recovered-material collection corridors on
+                the East Coast. Our location gives us direct access to a strong
+                network of certified recyclers, collectors, exporters, and logistics
+                partners for both materials.
               </p>
               <p>
-                We specialize exclusively in OCC Grade 11 and OCC Grade 12 — the
-                two most widely traded corrugated grades in the global recovered
-                paper market. Every bale we trade is inspected, documented, and
-                delivered to specification.
+                We trade OCC Grade 11 and OCC Grade 12 — the two most widely traded
+                corrugated grades in the global recovered paper market — alongside
+                PCR, mixed, and truck tire bales for export. Every load we trade is
+                inspected, documented, and delivered to specification, regardless of
+                which product line it comes from.
               </p>
             </div>
 
