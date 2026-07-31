@@ -204,13 +204,6 @@ const WHY_US = [
   "Long-term supply partnerships",
 ];
 
-const PRICE_GUIDE = [
-  ["Whole baled passenger tires", "$20 – 40 / MT", "Common for high-volume export contracts"],
-  ["Mixed baled scrap tires (PCR/LTR)", "$35 – 65 / MT", "The most frequently quoted range"],
-  ["Premium export-grade bales", "$65 – 80 / MT", "Clean, dry, well-compressed, consistent loading"],
-  ["Truck tire bales", "$30 – 80 / MT", "Varies with truck/passenger mix and bale density"],
-];
-
 /* ── Small presentational helpers ───────────────────────── */
 
 function DetailHeading({ children }: { children: React.ReactNode }) {
@@ -701,54 +694,6 @@ export default function TireSection() {
                     </h4>
                   </div>
                   <TickList items={WHY_US} />
-                </div>
-              </div>
-
-              {/* Indicative pricing */}
-              <div>
-                <DetailHeading>Indicative FOB Price Guide</DetailHeading>
-                <p className="mb-8 max-w-3xl" style={{ color: "#6C7A73" }}>
-                  Based on current export offers from U.S. recyclers and traders.
-                  Ranges are indicative only — final pricing depends on grade,
-                  bale density, volume and live market conditions. Contact us for
-                  a firm quotation.
-                </p>
-                <div className="card-soft overflow-hidden">
-                  <div className="overflow-x-auto">
-                    <table className="w-full text-left border-collapse min-w-[640px]">
-                      <thead>
-                        <tr style={{ backgroundColor: "#274C56" }}>
-                          <th className="px-6 py-4 text-xs font-bold tracking-[0.14em] uppercase text-white">
-                            Material
-                          </th>
-                          <th className="px-6 py-4 text-xs font-bold tracking-[0.14em] uppercase" style={{ color: "#E8BA74" }}>
-                            Typical FOB (USD/MT)
-                          </th>
-                          <th className="px-6 py-4 text-xs font-bold tracking-[0.14em] uppercase text-white/70">
-                            Comments
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {PRICE_GUIDE.map(([material, price, comment], i) => (
-                          <tr
-                            key={material}
-                            style={{ backgroundColor: i % 2 ? "#FBF8F2" : "#FFFFFF" }}
-                          >
-                            <td className="px-6 py-4 text-sm font-semibold" style={{ color: "#16281F" }}>
-                              {material}
-                            </td>
-                            <td className="px-6 py-4 text-sm font-bold whitespace-nowrap" style={{ color: "#217344" }}>
-                              {price}
-                            </td>
-                            <td className="px-6 py-4 text-sm" style={{ color: "#6C7A73" }}>
-                              {comment}
-                            </td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
                 </div>
               </div>
 
