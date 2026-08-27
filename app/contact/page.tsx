@@ -13,7 +13,9 @@ import {
 } from "@/components/icons";
 
 export const metadata = {
-  title: 'Request a Quote | ScraPack Solutions LLC — OCC & Scrap Tire Export USA',
+  title: {
+    absolute: 'Request a Quote | ScraPack Solutions LLC — OCC & Scrap Tire Export USA',
+  },
   description:
     'Request a free export quote from ScraPack Solutions LLC. We export OCC Grade 11 & 12 corrugated cardboard and baled scrap tires from the USA to buyers worldwide. Contact us via WhatsApp, email, or our online quote form.',
   keywords: 'OCC export quote, request OCC price, corrugated cardboard export India, OCC Grade 11 price, OCC Grade 12 export quote, scrap tire exporter USA, baled scrap tires supplier, FOB scrap tires USA',

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import GalleryGrid from '@/components/gallery/GalleryGrid'
 
 export const metadata: Metadata = {
-  title: 'Gallery | ScraPack Solutions LLC',
+  title: { absolute: 'Gallery | ScraPack Solutions LLC' },
   description: 'Browse our gallery of OCC bales, baled scrap tires, container loading and export operations — ScraPack Solutions LLC.',
   keywords: 'OCC bales photos, baled scrap tires, scrap tire bales container loading, OCC export gallery, tire recycling material USA',
   openGraph: {

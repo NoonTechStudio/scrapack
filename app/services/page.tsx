@@ -8,7 +8,9 @@ import ServicesFAQ from "@/components/services/ServicesFAQ";
 import ServicesCTA from "@/components/services/ServicesCTA";
 
 export const metadata = {
-  title: "Export Services | ScraPack Solutions LLC — OCC & Scrap Tires",
+  title: {
+    absolute: "Export Services | ScraPack Solutions LLC — OCC & Scrap Tires",
+  },
   description:
     "ScraPack Solutions offers full-service export from the USA. We source, bale, document, and ship OCC Grade 11 and Grade 12 corrugated cardboard and baled scrap tires to mills and processors worldwide.",
   keywords: "OCC Grade 11 export, OCC Grade 12 export, corrugated cardboard baling USA, OCC export documentation, FCL shipping India, OCC sourcing Philadelphia, scrap tire bales export, whole scrap tires FOB USA, end-of-life tire export",

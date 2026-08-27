@@ -30,11 +30,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
-  icons: {
-    icon: "/favicon.ico",
-    apple: "/icon.png",
-    shortcut: "/favicon.ico",
-  },
   robots: {
     index: true,
     follow: true,
