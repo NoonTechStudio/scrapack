@@ -14,12 +14,12 @@ export const metadata = {
   openGraph: {
     title: "About ScraPack Solutions LLC | OCC & Scrap Tire Export Company",
     description: "Philadelphia-based export trading company connecting US recyclers with paper mills and rubber processors worldwide — founded by Kashyap Patel.",
-    url: "https://scrapacksolutions.com/about",
+    url: "/about",
     siteName: "ScraPack Solutions LLC",
     type: "website",
   },
   alternates: {
-    canonical: "https://scrapacksolutions.com/about",
+    canonical: "/about",
   },
 };
 

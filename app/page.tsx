@@ -9,7 +9,9 @@ import ProcessSection from "@/components/home/ProcessSection";
 import CTASection from "@/components/home/CTASection";
 
 export const metadata: Metadata = {
-  title: 'ScraPack Solutions LLC | OCC & Scrap Tire Export from the USA',
+  title: {
+    absolute: 'ScraPack Solutions LLC | OCC & Scrap Tire Export from the USA',
+  },
   description: 'ScraPack Solutions LLC exports OCC Grade 11 & 12 corrugated cardboard and baled scrap tires from the USA to paper mills, pyrolysis plants and rubber recyclers worldwide. FOB shipments from major U.S. ports.',
   keywords: [
     'OCC export USA India',
@@ -33,13 +35,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'ScraPack Solutions LLC | OCC & Scrap Tire Export from the USA',
     description: 'Connecting US recyclers with paper mills and rubber processors worldwide. Export-grade OCC 11 & 12 and baled scrap tires, FOB from major U.S. ports.',
-    url: 'https://scrapacksolutions.com',
+    url: '/',
     siteName: 'ScraPack Solutions LLC',
     locale: 'en_US',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://scrapacksolutions.com',
+    canonical: '/',
   },
 };
 

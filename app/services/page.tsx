@@ -15,12 +15,12 @@ export const metadata = {
   openGraph: {
     title: "Export Services | ScraPack Solutions LLC",
     description: "Full-service export of OCC Grade 11 & 12 and baled scrap tires from the USA — sourcing, baling, documentation, and FCL shipping to major world ports.",
-    url: "https://scrapacksolutions.com/services",
+    url: "/services",
     siteName: "ScraPack Solutions LLC",
     type: "website",
   },
   alternates: {
-    canonical: "https://scrapacksolutions.com/services",
+    canonical: "/services",
   },
 };
 

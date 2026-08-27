@@ -20,12 +20,12 @@ export const metadata = {
   openGraph: {
     title: 'Request a Quote | ScraPack Solutions LLC',
     description: 'Get a competitive export quote on OCC Grade 11 & 12 and baled scrap tires, FOB from major U.S. ports.',
-    url: 'https://scrapacksolutions.com/contact',
+    url: '/contact',
     siteName: 'ScraPack Solutions LLC',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://scrapacksolutions.com/contact',
+    canonical: '/contact',
   },
 };
 
