@@ -1,32 +1,32 @@
-import Script from "next/script";
-import { GA_MEASUREMENT_ID } from "@/lib/site";
+'use client'
 
-/**
- * Google tag (gtag.js) for Google Analytics 4.
- *
- * Loaded with the `afterInteractive` strategy — the strategy Next.js
- * recommends for analytics and tag managers: it loads as soon as possible
- * without blocking hydration of first-party code. GA4 tracks client-side
- * route changes automatically via Enhanced Measurement, so no manual
- * pageview wiring is needed for the App Router.
- */
+import Script from 'next/script'
+
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+
 export default function GoogleAnalytics() {
-  if (!GA_MEASUREMENT_ID) return null;
+  if (!GA_MEASUREMENT_ID) return null
 
   return (
     <>
       <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
         strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
       />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '${GA_MEASUREMENT_ID}');
-        `}
-      </Script>
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}', {
+              page_path: window.location.pathname,
+            });
+          `,
+        }}
+      />
     </>
-  );
+  )
 }
