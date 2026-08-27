@@ -13,11 +13,18 @@ import {
   labelFor,
 } from "@/lib/quote";
 
-const TO_EMAIL = process.env.QUOTE_TO_EMAIL || "admin@scrapacksolutions.com";
-// Until the domain is verified in Resend, `onboarding@resend.dev` is the only
-// address allowed to send (and only to the Resend account owner).
+// Tolerate stray surrounding quotes / whitespace that can sneak in when an env
+// var is pasted into a dashboard (e.g. Vercel takes the value literally).
+const cleanEnv = (v: string | undefined) =>
+  (v || "").trim().replace(/^["']|["']$/g, "").trim();
+
+const TO_EMAIL = cleanEnv(process.env.QUOTE_TO_EMAIL) || "admin@scrapacksolutions.com";
+// Fallback sender only works before the domain is verified in Resend, and only
+// delivers to the Resend account owner. Once scrapacksolutions.com is verified,
+// set QUOTE_FROM_EMAIL to an address on that domain.
 const FROM_EMAIL =
-  process.env.QUOTE_FROM_EMAIL || "ScraPack Website <onboarding@resend.dev>";
+  cleanEnv(process.env.QUOTE_FROM_EMAIL) ||
+  "ScraPack Solutions Website <onboarding@resend.dev>";
 
 const REQUIRED_FIELDS: (keyof QuotePayload)[] = [
   "fullName",
@@ -158,9 +165,13 @@ export async function POST(request: Request) {
     });
 
     if (error) {
-      console.error("[quote] Resend error:", error);
+      console.error("[quote] Resend error:", { from: FROM_EMAIL, to: TO_EMAIL, error });
       return Response.json(
-        { error: "We couldn't send your request right now. Please try WhatsApp or email us directly." },
+        {
+          error:
+            "We couldn't send your request right now. Please try WhatsApp or email us directly.",
+          detail: error.name || error.message || null,
+        },
         { status: 502 },
       );
     }
@@ -173,4 +184,18 @@ export async function POST(request: Request) {
       { status: 500 },
     );
   }
+}
+
+// Lightweight config check — no secrets, safe to hit in a browser.
+// Visit /api/quote on the deployment to confirm the env vars are wired.
+export async function GET() {
+  const from = FROM_EMAIL;
+  return Response.json({
+    resendKeyPresent: !!cleanEnv(process.env.RESEND_API_KEY),
+    to: TO_EMAIL,
+    from,
+    fromLooksValid: /^[^<>]*<[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+>$|^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/.test(
+      from,
+    ),
+  });
 }
